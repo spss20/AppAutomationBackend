@@ -1,0 +1,29 @@
+{
+   "endpoint" : "webapp" , 
+   "method" : "POST",
+   "schema": [
+        {
+            "type" : "edittext",
+            "hint" : "App Name",
+            "id" : "appname",
+            "regex" : "[a-zA-Z0-9]",
+            "maxLength" : "15",
+            "minLength" : "8",
+            "default_value" : "Gamoss",
+            "isRequired" : true,
+            "note" : "Don't include any special characters"
+        } ,
+        {
+            "type" : "textview",
+            "size" : "16sp",
+            "text" : "Programming is love if you know",
+            "gravity" : "start"
+        } ,
+        {
+            "type" : "button" , 
+            "action" : "pickImage" ,
+            "text" : "Pick App Icon" ,
+            "id" : "icon" 
+        }
+   ] 
+}

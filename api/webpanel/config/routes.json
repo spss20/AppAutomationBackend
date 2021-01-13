@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/webpanels",
+      "handler": "webpanel.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/webpanels/count",
+      "handler": "webpanel.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/webpanels/:id",
+      "handler": "webpanel.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/webpanels",
+      "handler": "webpanel.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/webpanels/:id",
+      "handler": "webpanel.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/webpanels/:id",
+      "handler": "webpanel.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "slug": {
+      "type": "string",
+      "regex": "^[a-z]+$",
+      "unique": true
+    },
+    "subproducts": {
+      "collection": "subproduct",
+      "via": "product"
+    },
+    "categories": {
+      "collection": "categories",
+      "via": "products"
+    },
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "popular",
+        "trending",
+        "newest"
+      ],
+      "default": "none",
+      "required": true
+    },
+    "short_description": {
+      "type": "string"
+    }
+  }
+}

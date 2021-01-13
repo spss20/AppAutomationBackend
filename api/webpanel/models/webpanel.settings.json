@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webpanels",
+  "info": {
+    "name": "Webpanel"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "cpanel": {
+      "model": "cpanel",
+      "via": "webpanels"
+    },
+    "subdomain": {
+      "type": "string",
+      "required": true
+    },
+    "company_name": {
+      "type": "string",
+      "required": true
+    },
+    "company_logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "product": {
+      "model": "subproduct"
+    }
+  }
+}

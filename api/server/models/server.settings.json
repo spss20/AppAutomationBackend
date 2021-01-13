@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "servers",
+  "info": {
+    "name": "Server"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "ipaddress": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "website",
+        "apps"
+      ]
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "accessToken": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

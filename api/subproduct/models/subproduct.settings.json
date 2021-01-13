@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subproducts",
+  "info": {
+    "name": "Subproduct",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "product": {
+      "via": "subproducts",
+      "model": "products"
+    },
+    "apischema": {
+      "type": "json",
+      "required": true
+    }
+  }
+}
