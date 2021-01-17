@@ -41,7 +41,7 @@ module.exports = {
         const fileName = "fluxstore_" + uuidv4().substring(0, 8) + ".txt";
 
         const cmd = `/home/${serverEntity.username}/scripts/flux/multivendorapp.sh ` +
-            ' -a "' + entity.appName + '"' +
+            ' -a "' + entity.appname + '"' +
             ' -b "' + entity.baseUrl + '"' +
             ' -k "' + entity.consumerKey + '"' +
             ' -s "' + entity.consumerSecret + '"' +
