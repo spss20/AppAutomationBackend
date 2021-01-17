@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/17/2021 12:01:49 PM"
+    "x-generation-date": "01/17/2021 1:37:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8788,6 +8788,9 @@
               "phone": {
                 "type": "integer"
               },
+              "fluxstore": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -9180,6 +9183,7 @@
           "baseUrl",
           "consumerKey",
           "consumerSecret",
+          "packageName",
           "appIcon",
           "splashImage",
           "googleJson"
@@ -9489,6 +9493,64 @@
           "versionName": {
             "type": "string"
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "phone"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "cpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "fluxstore": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -9500,7 +9562,8 @@
           "appname",
           "baseUrl",
           "consumerKey",
-          "consumerSecret"
+          "consumerSecret",
+          "packageName"
         ],
         "properties": {
           "appname": {
@@ -9534,6 +9597,9 @@
             "type": "integer"
           },
           "versionName": {
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           },
           "published_at": {
@@ -10172,6 +10238,9 @@
               "phone": {
                 "type": "integer"
               },
+              "fluxstore": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -10346,6 +10415,9 @@
               },
               "phone": {
                 "type": "integer"
+              },
+              "fluxstore": {
+                "type": "string"
               },
               "created_by": {
                 "type": "string"
@@ -10716,6 +10788,9 @@
                 "phone": {
                   "type": "integer"
                 },
+                "fluxstore": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -10886,6 +10961,81 @@
           },
           "phone": {
             "type": "integer"
+          },
+          "fluxstore": {
+            "required": [
+              "id",
+              "appname",
+              "baseUrl",
+              "consumerKey",
+              "consumerSecret",
+              "packageName",
+              "appIcon",
+              "splashImage",
+              "googleJson"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appname": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "consumerKey": {
+                "type": "string"
+              },
+              "consumerSecret": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "razorpayKey": {
+                "type": "string"
+              },
+              "mapApi": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "appIcon": {
+                "type": "string"
+              },
+              "headerLogo": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -10937,6 +11087,9 @@
           },
           "phone": {
             "type": "integer"
+          },
+          "fluxstore": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

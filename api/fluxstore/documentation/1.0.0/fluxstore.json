@@ -521,6 +521,7 @@
           "baseUrl",
           "consumerKey",
           "consumerSecret",
+          "packageName",
           "appIcon",
           "splashImage",
           "googleJson"
@@ -830,6 +831,64 @@
           "versionName": {
             "type": "string"
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "phone"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "cpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "fluxstore": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -841,7 +900,8 @@
           "appname",
           "baseUrl",
           "consumerKey",
-          "consumerSecret"
+          "consumerSecret",
+          "packageName"
         ],
         "properties": {
           "appname": {
@@ -875,6 +935,9 @@
             "type": "integer"
           },
           "versionName": {
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           },
           "published_at": {

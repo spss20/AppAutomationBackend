@@ -639,6 +639,9 @@
               "phone": {
                 "type": "integer"
               },
+              "fluxstore": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

@@ -1308,6 +1308,81 @@
           },
           "phone": {
             "type": "integer"
+          },
+          "fluxstore": {
+            "required": [
+              "id",
+              "appname",
+              "baseUrl",
+              "consumerKey",
+              "consumerSecret",
+              "packageName",
+              "appIcon",
+              "splashImage",
+              "googleJson"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appname": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "consumerKey": {
+                "type": "string"
+              },
+              "consumerSecret": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "razorpayKey": {
+                "type": "string"
+              },
+              "mapApi": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "appIcon": {
+                "type": "string"
+              },
+              "headerLogo": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1359,6 +1434,9 @@
           },
           "phone": {
             "type": "integer"
+          },
+          "fluxstore": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
