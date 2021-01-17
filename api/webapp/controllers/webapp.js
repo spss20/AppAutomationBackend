@@ -12,28 +12,35 @@ module.exports = {
     async create(ctx) {
 
         //getting user id
-        const {id} = await strapi.plugins[
+        const { id } = await strapi.plugins[
             'users-permissions'
-          ].services.jwt.getToken(ctx);
+        ].services.jwt.getToken(ctx);
 
         //Create database entry
-         let entity;
-         if (ctx.is('multipart')) {
-             const { data, files } = parseMultipartData(ctx);
-             data.user = [id];
-             entity = await strapi.services.webapp.create(data, { files });
-         } else {
-             ctx.request.body.user = [id] ;
-             entity = await strapi.services.webapp.create(ctx.request.body);
-         }
-        
-         if(entity.icon == null){
-             return "Cannot call api without company logo";
-         }
+        let entity;
+        if (ctx.is('multipart')) {
+            const { data, files } = parseMultipartData(ctx);
+            data.user = [id];
+            entity = await strapi.services.webapp.create(data, { files });
+        } else {
+            ctx.request.body.user = [id];
+            entity = await strapi.services.webapp.create(ctx.request.body);
+        }
 
-        const fileName =   "webapp_" + uuidv4().substring(0, 8) + ".txt";
-        
-        const cmd = '/home/webapp/scripts/webapp/makewebapp.sh ' +
+        if (entity.icon == null) {
+            return {
+                "status": 204,
+                "error": "Cannot call api without company logo"
+            };
+        }
+
+        //find website server 
+        const serverEntity = await strapi.query('server').findOne({ type: 'apps' });
+
+        //Preparing Command
+        const fileName = "webapp_" + uuidv4().substring(0, 8) + ".txt";
+
+        const cmd = `/home/${serverEntity.username}/scripts/webapp/makewebapp.sh ` +
             ' -n "' + entity.appname + '"' +
             ' -u "' + entity.website + '"' +
             ' -c "' + entity.version_code + '"' +
@@ -42,16 +49,18 @@ module.exports = {
             ' -p "' + entity.package + '"' +
             ' > ../process/' + fileName;
 
-        console.log("Command: " , cmd);
-        //find website server 
-        const serverEntity = await strapi.query('server').findOne({type : 'apps'});
-        console.log("Server : " ,serverEntity);
+        console.log("Command: ", cmd);
 
         //execute the command
         const apiUrl = serverEntity.url + "api/executecommand.php";
 
         // request to the website server
-        request.post(apiUrl, { form: { 'cmd': cmd } })
+        const fields = { form: { 'cmd': cmd  , 'accessToken' : serverEntity.accessToken } };
+        request.post(apiUrl, fields , function (err, httpResponse, body) { 
+            console.log("Http Reponse: " , httpResponse)
+            console.log("Error: " , err)
+            console.log("Body: " , body);
+        })
 
         //return output
         entity.outputUrl = serverEntity.url + "/process/" + fileName;

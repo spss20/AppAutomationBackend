@@ -516,7 +516,8 @@
     "schemas": {
       "Server": {
         "required": [
-          "id"
+          "id",
+          "username"
         ],
         "properties": {
           "id": {
@@ -544,6 +545,9 @@
           "name": {
             "type": "string"
           },
+          "username": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -551,6 +555,9 @@
         }
       },
       "NewServer": {
+        "required": [
+          "username"
+        ],
         "properties": {
           "url": {
             "type": "string"
@@ -572,6 +579,9 @@
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "username": {
             "type": "string"
           },
           "published_at": {

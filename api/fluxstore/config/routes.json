@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fluxstores",
+      "handler": "fluxstore.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fluxstores/count",
+      "handler": "fluxstore.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fluxstores/:id",
+      "handler": "fluxstore.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fluxstores",
+      "handler": "fluxstore.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fluxstores/:id",
+      "handler": "fluxstore.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fluxstores/:id",
+      "handler": "fluxstore.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

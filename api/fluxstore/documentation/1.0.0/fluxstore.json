@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/cpanels": {
+    "/fluxstores": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Cpanel"
+                    "$ref": "#/components/schemas/Fluxstore"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Cpanel"
+          "Fluxstore"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Cpanel"
+                  "$ref": "#/components/schemas/Fluxstore"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Cpanel"
+          "Fluxstore"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCpanel"
+                "$ref": "#/components/schemas/NewFluxstore"
               }
             }
           }
         }
       }
     },
-    "/cpanels/count": {
+    "/fluxstores/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Cpanel"
+          "Fluxstore"
         ],
         "parameters": []
       }
     },
-    "/cpanels/{id}": {
+    "/fluxstores/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Cpanel"
+                  "$ref": "#/components/schemas/Fluxstore"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Cpanel"
+          "Fluxstore"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Cpanel"
+                  "$ref": "#/components/schemas/Fluxstore"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Cpanel"
+          "Fluxstore"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewCpanel"
+                "$ref": "#/components/schemas/NewFluxstore"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Cpanel"
+          "Fluxstore"
         ],
         "parameters": [
           {
@@ -514,124 +514,105 @@
   },
   "components": {
     "schemas": {
-      "Cpanel": {
+      "Fluxstore": {
         "required": [
           "id",
-          "username",
-          "password",
-          "email",
-          "domain",
-          "client_name"
+          "appname",
+          "baseUrl",
+          "consumerKey",
+          "consumerSecret",
+          "appIcon",
+          "splashImage",
+          "googleJson"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "username": {
-            "type": "string",
-            "maxLength": 16,
-            "minLength": 6
+          "appname": {
+            "type": "string"
           },
-          "password": {
-            "type": "string",
-            "format": "password",
-            "minLength": 8
+          "baseUrl": {
+            "type": "string"
+          },
+          "consumerKey": {
+            "type": "string"
+          },
+          "consumerSecret": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
           },
           "email": {
             "type": "string"
           },
-          "domain": {
+          "razorpayKey": {
             "type": "string"
           },
-          "client_name": {
+          "mapApi": {
             "type": "string"
           },
-          "user_id": {
+          "packageName": {
+            "type": "string"
+          },
+          "appIcon": {
             "required": [
               "id",
-              "username",
-              "email",
-              "phone"
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
             ],
             "properties": {
               "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmationToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "cpanels": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "phone": {
-                "type": "integer"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "server": {
-            "required": [
-              "id",
-              "username"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "ipaddress": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string"
-              },
-              "priority": {
-                "type": "integer"
-              },
-              "accessToken": {
                 "type": "string"
               },
               "name": {
                 "type": "string"
               },
-              "username": {
+              "alternativeText": {
                 "type": "string"
               },
-              "published_at": {
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
                 "type": "string"
               },
               "created_by": {
@@ -642,45 +623,212 @@
               }
             }
           },
-          "webpanels": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "subdomain",
-                "company_name",
-                "company_logo"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "cpanel": {
-                  "type": "string"
-                },
-                "subdomain": {
-                  "type": "string"
-                },
-                "company_name": {
-                  "type": "string"
-                },
-                "company_logo": {
-                  "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
+          "headerLogo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
               }
             }
+          },
+          "splashImage": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "googleJson": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -688,45 +836,46 @@
           }
         }
       },
-      "NewCpanel": {
+      "NewFluxstore": {
         "required": [
-          "username",
-          "password",
-          "email",
-          "domain",
-          "client_name"
+          "appname",
+          "baseUrl",
+          "consumerKey",
+          "consumerSecret"
         ],
         "properties": {
-          "username": {
-            "type": "string",
-            "maxLength": 16,
-            "minLength": 6
+          "appname": {
+            "type": "string"
           },
-          "password": {
-            "type": "string",
-            "format": "password",
-            "minLength": 8
+          "baseUrl": {
+            "type": "string"
+          },
+          "consumerKey": {
+            "type": "string"
+          },
+          "consumerSecret": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
           },
           "email": {
             "type": "string"
           },
-          "domain": {
+          "razorpayKey": {
             "type": "string"
           },
-          "client_name": {
+          "mapApi": {
             "type": "string"
           },
-          "user_id": {
+          "packageName": {
             "type": "string"
           },
-          "server": {
-            "type": "string"
+          "versionCode": {
+            "type": "integer"
           },
-          "webpanels": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "versionName": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -744,7 +893,7 @@
   },
   "tags": [
     {
-      "name": "Cpanel"
+      "name": "Fluxstore"
     }
   ]
 }

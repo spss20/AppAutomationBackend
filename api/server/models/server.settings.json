@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "servers",
   "info": {
-    "name": "Server"
+    "name": "Server",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -31,6 +32,10 @@
     },
     "name": {
       "type": "string"
+    },
+    "username": {
+      "type": "string",
+      "required": true
     }
   }
 }
