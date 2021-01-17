@@ -39,7 +39,7 @@ module.exports = {
 
         //Preparing Command
         const fileName = "fluxstore_" + uuidv4().substring(0, 8) + ".txt";
-
+        const host = "http://" + process.env.HOST;
         const cmd = `/home/${serverEntity.username}/scripts/flux/multivendorapp.sh ` +
             ' -a "' + entity.appname + '"' +
             ' -b "' + entity.baseUrl + '"' +
@@ -50,10 +50,10 @@ module.exports = {
             ' -e "' + entity.email + '"' +
             ' -o "' + entity.packageName + '"' +
             ' -m "' + entity.mapApi + '"' +
-            (entity.appIcon ? ' -l "' + process.env.HOST + entity.appIcon.url + '"' : '') +
-            (entity.headerLogo ? ' -h "' + process.env.HOST + entity.headerLogo.url + '"' : '') +
-            (entity.splashImage ? ' -n "' + process.env.HOST + entity.splashImage.url + '"' : '') +
-            (entity.googleJson ? ' -g "' + process.env.HOST + entity.googleJson.url + '"' : '') +
+            (entity.appIcon ? ' -l "' + host + entity.appIcon.url + '"' : '') +
+            (entity.headerLogo ? ' -h "' + host + entity.headerLogo.url + '"' : '') +
+            (entity.splashImage ? ' -n "' + host + entity.splashImage.url + '"' : '') +
+            (entity.googleJson ? ' -g "' + host + entity.googleJson.url + '"' : '') +
             ' -c "' + entity.versionCode + '"' +
             ' -v "' + entity.versionName + '"' +
             ' > ../process/' + fileName;
