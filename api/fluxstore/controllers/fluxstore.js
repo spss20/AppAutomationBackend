@@ -33,7 +33,7 @@ module.exports = {
                 "error": "Cannot call api without company logo"
             };
         }
-
+        //Just for change
         //find website server 
         const serverEntity = await strapi.query('server').findOne({ type: 'apps' });
 
