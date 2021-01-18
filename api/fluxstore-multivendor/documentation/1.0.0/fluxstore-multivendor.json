@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/webapps": {
+    "/fluxstore-multivendors": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Webapp"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Webapp"
+          "Fluxstore-multivendor"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webapp"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Webapp"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewWebapp"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/webapps/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Webapp"
+          "Fluxstore-multivendor"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFluxstore-multivendor"
+              }
+            }
+          }
+        }
       }
     },
-    "/webapps/{id}": {
+    "/fluxstore-multivendors/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webapp"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Webapp"
+          "Fluxstore-multivendor"
+        ],
+        "parameters": []
+      }
+    },
+    "/fluxstore-multivendors/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Fluxstore-multivendor"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webapp"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Webapp"
+          "Fluxstore-multivendor"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWebapp"
+                "$ref": "#/components/schemas/NewFluxstore-multivendor"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Webapp"
+          "Fluxstore-multivendor"
         ],
         "parameters": [
           {
@@ -514,13 +527,17 @@
   },
   "components": {
     "schemas": {
-      "Webapp": {
+      "Fluxstore-multivendor": {
         "required": [
           "id",
           "appname",
-          "icon",
-          "package",
-          "website"
+          "type",
+          "baseUrl",
+          "consumerKey",
+          "consumerSecret",
+          "appIcon",
+          "splashImage",
+          "googleJson"
         ],
         "properties": {
           "id": {
@@ -529,7 +546,38 @@
           "appname": {
             "type": "string"
           },
-          "icon": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "dokan",
+              "wcfm"
+            ]
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "consumerKey": {
+            "type": "string"
+          },
+          "consumerSecret": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "razorpayKey": {
+            "type": "string"
+          },
+          "mapApi": {
+            "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "appIcon": {
             "required": [
               "id",
               "name",
@@ -596,17 +644,212 @@
               }
             }
           },
-          "package": {
-            "type": "string"
+          "headerLogo": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "website": {
-            "type": "string"
+          "splashImage": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "version_name": {
-            "type": "number"
+          "googleJson": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "version_code": {
+          "versionCode": {
             "type": "integer"
+          },
+          "versionName": {
+            "type": "string"
           },
           "user": {
             "required": [
@@ -675,27 +918,54 @@
           }
         }
       },
-      "NewWebapp": {
+      "NewFluxstore-multivendor": {
         "required": [
           "appname",
-          "package",
-          "website"
+          "type",
+          "baseUrl",
+          "consumerKey",
+          "consumerSecret"
         ],
         "properties": {
           "appname": {
             "type": "string"
           },
-          "package": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "dokan",
+              "wcfm"
+            ]
+          },
+          "baseUrl": {
             "type": "string"
           },
-          "website": {
+          "consumerKey": {
             "type": "string"
           },
-          "version_name": {
-            "type": "number"
+          "consumerSecret": {
+            "type": "string"
           },
-          "version_code": {
+          "phone": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "razorpayKey": {
+            "type": "string"
+          },
+          "mapApi": {
+            "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "versionCode": {
             "type": "integer"
+          },
+          "versionName": {
+            "type": "string"
           },
           "user": {
             "type": "string"
@@ -714,9 +984,5 @@
       }
     }
   },
-  "tags": [
-    {
-      "name": "Webapp"
-    }
-  ]
+  "tags": []
 }

@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fluxstore_multivendors",
+  "info": {
+    "name": "Fluxstore Multivendor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "appname": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "dokan",
+        "wcfm"
+      ],
+      "required": true
+    },
+    "baseUrl": {
+      "type": "string",
+      "required": true
+    },
+    "consumerKey": {
+      "type": "string",
+      "required": true
+    },
+    "consumerSecret": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "razorpayKey": {
+      "type": "string"
+    },
+    "mapApi": {
+      "type": "string"
+    },
+    "packageName": {
+      "type": "string"
+    },
+    "appIcon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "headerLogo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "splashImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "googleJson": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "versionCode": {
+      "type": "integer"
+    },
+    "versionName": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "fluxstore_multivendor"
+    }
+  }
+}

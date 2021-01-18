@@ -642,6 +642,9 @@
               "fluxstore": {
                 "type": "string"
               },
+              "fluxstore_multivendor": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

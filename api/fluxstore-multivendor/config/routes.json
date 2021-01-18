@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fluxstore-multivendors",
+      "handler": "fluxstore-multivendor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fluxstore-multivendors/count",
+      "handler": "fluxstore-multivendor.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fluxstore-multivendors/:id",
+      "handler": "fluxstore-multivendor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fluxstore-multivendors",
+      "handler": "fluxstore-multivendor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fluxstore-multivendors/:id",
+      "handler": "fluxstore-multivendor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fluxstore-multivendors/:id",
+      "handler": "fluxstore-multivendor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

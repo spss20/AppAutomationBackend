@@ -71,6 +71,10 @@
     "fluxstore": {
       "via": "user",
       "model": "fluxstore"
+    },
+    "fluxstore_multivendor": {
+      "via": "user",
+      "model": "fluxstore-multivendor"
     }
   }
 }

@@ -1383,6 +1383,84 @@
                 "type": "string"
               }
             }
+          },
+          "fluxstore_multivendor": {
+            "required": [
+              "id",
+              "appname",
+              "type",
+              "baseUrl",
+              "consumerKey",
+              "consumerSecret",
+              "appIcon",
+              "splashImage",
+              "googleJson"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appname": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "consumerKey": {
+                "type": "string"
+              },
+              "consumerSecret": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "razorpayKey": {
+                "type": "string"
+              },
+              "mapApi": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "appIcon": {
+                "type": "string"
+              },
+              "headerLogo": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1436,6 +1514,9 @@
             "type": "integer"
           },
           "fluxstore": {
+            "type": "string"
+          },
+          "fluxstore_multivendor": {
             "type": "string"
           },
           "created_by": {
