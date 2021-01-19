@@ -709,6 +709,12 @@
               "short_description": {
                 "type": "string"
               },
+              "brochure": {
+                "type": "string"
+              },
+              "isAutomated": {
+                "type": "boolean"
+              },
               "published_at": {
                 "type": "string"
               },

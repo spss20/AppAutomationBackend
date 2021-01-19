@@ -76,8 +76,4 @@ module.exports = {
         entity.outputUrl = serverEntity.url + "/process/" + fileName;
         return sanitizeEntity(entity, { model: strapi.models.cpanel });
     },
-
-    async 'update-surya'(ctx){
-
-    }
 };

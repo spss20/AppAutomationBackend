@@ -56,6 +56,20 @@
     },
     "short_description": {
       "type": "string"
+    },
+    "brochure": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "isAutomated": {
+      "type": "boolean"
     }
   }
 }
