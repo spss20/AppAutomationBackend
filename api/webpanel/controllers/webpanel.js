@@ -38,13 +38,13 @@ module.exports = {
         const serverEntity = await strapi.services.server.findOne(entity.cpanel.server);
 
         const fileName = entity.cpanel.username + "_" + uuidv4().substring(0, 8) + ".txt";
-
+        const host = "http://" + process.env.HOST + ":" + process.env.PORT;
         const cmd = `sudo /home/${serverEntity.username}/scripts/` + productEntity.slug +
             '/install_admin_panel.sh ' +
             (entity.subdomain ? ' -s "' + entity.subdomain + '"' : '') +
             ' -d "' + entity.cpanel.domain + '"' +
             ' -u "' + entity.cpanel.username + '"' +
-            (entity.company_logo ? ' -l "' + process.env.HOST + entity.company_logo.url + '"' : '') +
+            (entity.company_logo ? ' -l "' + host + entity.company_logo.url + '"' : '') +
             ' -n "' + entity.company_name + '"' +
             ' -x "' + productEntity.slug + '"' +
             ' > ../process/' + fileName;
