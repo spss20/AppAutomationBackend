@@ -517,7 +517,6 @@
       "Webpanel": {
         "required": [
           "id",
-          "subdomain",
           "company_name",
           "company_logo"
         ],
@@ -695,7 +694,6 @@
       },
       "NewWebpanel": {
         "required": [
-          "subdomain",
           "company_name"
         ],
         "properties": {

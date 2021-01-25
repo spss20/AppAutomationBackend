@@ -72,7 +72,7 @@ module.exports = {
 
         //return output
         entity.outputUrl = serverEntity.url + "/process/" + fileName;
-        return sanitizeEntity(entity, { model: strapi.models.cpanel });
+        return sanitizeEntity(entity, { model: strapi.models.fluxstore });
     },
 
 };

@@ -64,16 +64,15 @@ module.exports = {
         //execute the command
         const apiUrl = serverEntity.url + "api/executecommand.php";
 
-        // request to the website server
+        // request to the app server
         const fields = { form: { 'cmd': cmd  , 'accessToken' : serverEntity.accessToken } };
         request.post(apiUrl, fields , function (err, httpResponse, body) { 
             console.log("Error: " , err)
             console.log("Body: " , body);
         })
 
-        this['update-surya']
         //return output
         entity.outputUrl = serverEntity.url + "/process/" + fileName;
-        return sanitizeEntity(entity, { model: strapi.models.cpanel });
+        return sanitizeEntity(entity, { model: strapi.models['fluxstore-multivendor'] });
     },
 };

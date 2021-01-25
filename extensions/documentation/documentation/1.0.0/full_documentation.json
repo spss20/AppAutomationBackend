@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/19/2021 12:10:27 PM"
+    "x-generation-date": "01/25/2021 2:06:47 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9384,7 +9384,6 @@
             "items": {
               "required": [
                 "id",
-                "subdomain",
                 "company_name",
                 "company_logo"
               ],
@@ -11561,7 +11560,6 @@
       "Webpanel": {
         "required": [
           "id",
-          "subdomain",
           "company_name",
           "company_logo"
         ],
@@ -11739,7 +11737,6 @@
       },
       "NewWebpanel": {
         "required": [
-          "subdomain",
           "company_name"
         ],
         "properties": {
