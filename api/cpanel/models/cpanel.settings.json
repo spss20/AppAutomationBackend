@@ -49,6 +49,10 @@
     "webpanels": {
       "via": "cpanel",
       "collection": "webpanel"
+    },
+    "adminpanels": {
+      "via": "cpanel",
+      "collection": "adminpanels"
     }
   }
 }

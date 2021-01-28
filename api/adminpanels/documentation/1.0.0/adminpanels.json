@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/webpanels": {
+    "/adminpanels": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the adminpanels's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve adminpanels document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Webpanel"
+                    "$ref": "#/components/schemas/Adminpanels"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Webpanel"
+          "Adminpanels"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new adminpanels record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve adminpanels document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webpanel"
+                  "$ref": "#/components/schemas/Adminpanels"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Webpanel"
+          "Adminpanels"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWebpanel"
+                "$ref": "#/components/schemas/NewAdminpanels"
               }
             }
           }
         }
       }
     },
-    "/webpanels/count": {
+    "/adminpanels/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of adminpanels documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve adminpanels document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Webpanel"
+          "Adminpanels"
         ],
         "parameters": []
       }
     },
-    "/webpanels/{id}": {
+    "/adminpanels/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one adminpanels record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve adminpanels document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webpanel"
+                  "$ref": "#/components/schemas/Adminpanels"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Webpanel"
+          "Adminpanels"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single adminpanels record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve adminpanels document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Webpanel"
+                  "$ref": "#/components/schemas/Adminpanels"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Webpanel"
+          "Adminpanels"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewWebpanel"
+                "$ref": "#/components/schemas/NewAdminpanels"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single adminpanels record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single adminpanels based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Webpanel"
+          "Adminpanels"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Webpanel": {
+      "Adminpanels": {
         "required": [
           "id",
           "company_name",
@@ -721,7 +721,7 @@
           }
         }
       },
-      "NewWebpanel": {
+      "NewAdminpanels": {
         "required": [
           "company_name"
         ],
@@ -754,7 +754,7 @@
   },
   "tags": [
     {
-      "name": "Webpanel"
+      "name": "Adminpanels"
     }
   ]
 }

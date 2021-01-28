@@ -26,27 +26,22 @@ module.exports = {
             entity = await strapi.services.webpanel.create(ctx.request.body);
         }
 
-      
         //TODO: Add a null cpanel check here for entity.cpanel
         //Preparing Command
-        const product_id = {"id" : entity.product.product}
-        console.log(product_id);
-        const productEntity = await strapi.services.products.findOne(product_id);
-        console.log(productEntity);
 
         //find website server 
         const serverEntity = await strapi.services.server.findOne(entity.cpanel.server);
 
         const fileName = entity.cpanel.username + "_" + uuidv4().substring(0, 8) + ".txt";
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
-        const cmd = `sudo /home/${serverEntity.username}/scripts/` + productEntity.slug +
+        const cmd = `sudo /home/${serverEntity.username}/scripts/` + entity.product.slug +
             '/install_admin_panel.sh ' +
             (entity.subdomain ? ' -s "' + entity.subdomain + '"' : '') +
             ' -d "' + entity.cpanel.domain + '"' +
             ' -u "' + entity.cpanel.username + '"' +
             (entity.company_logo ? ' -l "' + host + entity.company_logo.url + '"' : '') +
             ' -n "' + entity.company_name + '"' +
-            ' -x "' + productEntity.slug + '"' +
+            ' -x "' + entity.product.slug + '"' +
             ' > ../process/' + fileName;
         console.log(cmd);
 

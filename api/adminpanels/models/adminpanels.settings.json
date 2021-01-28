@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "webpanels",
+  "collectionName": "adminpanels",
   "info": {
-    "name": "Webpanel",
+    "name": "Adminpanels",
     "description": ""
   },
   "options": {
@@ -13,11 +13,10 @@
   "attributes": {
     "cpanel": {
       "model": "cpanel",
-      "via": "webpanels"
+      "via": "adminpanels"
     },
     "subdomain": {
-      "type": "string",
-      "required": false
+      "type": "string"
     },
     "company_name": {
       "type": "string",
