@@ -19,7 +19,6 @@ module.exports = {
 
         //find website server 
         const serverEntity = await strapi.query('server').findOne({ type: 'website' });
-        console.log(serverEntity);
 
         //Create database entry
         let entity;
@@ -34,14 +33,14 @@ module.exports = {
             entity = await strapi.services.cpanel.create(ctx.request.body);
         }
 
-
+        console.log(entity);
         const fileName = ctx.request.body.username + "_" + uuidv4().substring(0, 8) + ".txt";
 
         const cmd = `sudo /home/${serverEntity.username}/scripts/create_cpanel.sh ` +
-            ' -d "' + ctx.request.body.domain + '"' +
-            ' -u "' + ctx.request.body.username + '"' +
-            ' -p "' + ctx.request.body.password + '"' +
-            ' -e "' + ctx.request.body.email + '"' +
+            ' -d "' + entity.domain + '"' +
+            ' -u "' + entity.username + '"' +
+            ' -p "' + entity.password + '"' +
+            ' -e "' + entity.email + '"' +
             ' > ../process/' + fileName;
         console.log(cmd)
         //execute the command
