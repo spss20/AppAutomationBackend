@@ -32,8 +32,7 @@ module.exports = {
             ctx.request.body.server = [serverEntity.id];
             entity = await strapi.services.cpanel.create(ctx.request.body);
         }
-
-        console.log(entity);
+        
         const fileName = ctx.request.body.username + "_" + uuidv4().substring(0, 8) + ".txt";
 
         const cmd = `sudo /home/${serverEntity.username}/scripts/create_cpanel.sh ` +
