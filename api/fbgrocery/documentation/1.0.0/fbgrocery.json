@@ -518,7 +518,6 @@
         "required": [
           "id",
           "appName",
-          "baseUrl",
           "packageName",
           "icon",
           "splash",
@@ -771,7 +770,6 @@
       "NewFbgrocery": {
         "required": [
           "appName",
-          "baseUrl",
           "packageName",
           "appType"
         ],

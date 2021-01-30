@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/30/2021 4:09:53 PM"
+    "x-generation-date": "01/30/2021 4:14:29 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11027,7 +11027,6 @@
         "required": [
           "id",
           "appName",
-          "baseUrl",
           "packageName",
           "icon",
           "splash",
@@ -11280,7 +11279,6 @@
       "NewFbgrocery": {
         "required": [
           "appName",
-          "baseUrl",
           "packageName",
           "appType"
         ],
