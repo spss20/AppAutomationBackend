@@ -25,7 +25,7 @@
     },
     "lowInventory": {
       "type": "integer",
-      "required": true
+      "required": false
     },
     "packageName": {
       "type": "string",

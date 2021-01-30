@@ -520,7 +520,6 @@
           "appName",
           "baseUrl",
           "dynamicLink",
-          "lowInventory",
           "packageName",
           "icon",
           "splash",
@@ -775,7 +774,6 @@
           "appName",
           "baseUrl",
           "dynamicLink",
-          "lowInventory",
           "packageName",
           "appType"
         ],

@@ -52,7 +52,7 @@ module.exports = {
             ' -a "' + entity.appName + '"' +
             ' -b "' + entity.baseUrl + '"' +
             ' -d "' + entity.dynamicLink + '"' +
-            ' -l "' + entity.lowInventory + '"' +
+            (entity.lowInventory ? ' -l "' + entity.lowInventory + '"' : '') +
             ' -p "' + entity.packageName + '"' +
             (entity.razorpayKey ? ' -r "' + entity.razorpayKey + '"' : '') +
             (entity.icon ? ' -i "' + host + entity.icon.url + '"' : '') +

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/30/2021 12:15:18 PM"
+    "x-generation-date": "01/30/2021 3:34:41 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11029,7 +11029,6 @@
           "appName",
           "baseUrl",
           "dynamicLink",
-          "lowInventory",
           "packageName",
           "icon",
           "splash",
@@ -11284,7 +11283,6 @@
           "appName",
           "baseUrl",
           "dynamicLink",
-          "lowInventory",
           "packageName",
           "appType"
         ],
