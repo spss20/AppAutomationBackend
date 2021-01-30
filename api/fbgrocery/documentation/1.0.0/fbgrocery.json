@@ -519,7 +519,6 @@
           "id",
           "appName",
           "baseUrl",
-          "dynamicLink",
           "packageName",
           "icon",
           "splash",
@@ -773,7 +772,6 @@
         "required": [
           "appName",
           "baseUrl",
-          "dynamicLink",
           "packageName",
           "appType"
         ],

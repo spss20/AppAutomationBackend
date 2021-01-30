@@ -51,7 +51,7 @@ module.exports = {
         const cmd = `~/scripts/fbgrocery/${scriptFile} ` +
             ' -a "' + entity.appName + '"' +
             ' -b "' + entity.baseUrl + '"' +
-            ' -d "' + entity.dynamicLink + '"' +
+            (entity.dynamicLink ? ' -d "' + entity.dynamicLink + '"' : '') +
             (entity.lowInventory ? ' -l "' + entity.lowInventory + '"' : '') +
             ' -p "' + entity.packageName + '"' +
             (entity.razorpayKey ? ' -r "' + entity.razorpayKey + '"' : '') +

@@ -21,7 +21,7 @@
     },
     "dynamicLink": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "lowInventory": {
       "type": "integer",
