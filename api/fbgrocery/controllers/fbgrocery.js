@@ -50,7 +50,7 @@ module.exports = {
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
         const cmd = `~/scripts/fbgrocery/${scriptFile} ` +
             ' -a "' + entity.appName + '"' +
-            ' -b "' + entity.baseUrl + '"' +
+            (entity.baseUrl ? ' -b "' + entity.baseUrl + '"' : '') +
             (entity.dynamicLink ? ' -d "' + entity.dynamicLink + '"' : '') +
             (entity.lowInventory ? ' -l "' + entity.lowInventory + '"' : '') +
             ' -p "' + entity.packageName + '"' +
