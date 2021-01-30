@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fbgroceries",
+  "info": {
+    "name": "Fbgrocery",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "appName": {
+      "type": "string",
+      "required": true
+    },
+    "baseUrl": {
+      "type": "string",
+      "required": true
+    },
+    "dynamicLink": {
+      "type": "string",
+      "required": true
+    },
+    "lowInventory": {
+      "type": "integer",
+      "required": true
+    },
+    "packageName": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "splash": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "googleJson": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "razorpayKey": {
+      "type": "string"
+    },
+    "versionCode": {
+      "type": "integer"
+    },
+    "versionName": {
+      "type": "string"
+    },
+    "appType": {
+      "type": "enumeration",
+      "enum": [
+        "user",
+        "delivery",
+        "admin"
+      ],
+      "required": true
+    }
+  }
+}

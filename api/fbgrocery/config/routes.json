@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fbgroceries",
+      "handler": "fbgrocery.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fbgroceries/count",
+      "handler": "fbgrocery.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fbgroceries/:id",
+      "handler": "fbgrocery.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fbgroceries",
+      "handler": "fbgrocery.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fbgroceries/:id",
+      "handler": "fbgrocery.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fbgroceries/:id",
+      "handler": "fbgrocery.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
