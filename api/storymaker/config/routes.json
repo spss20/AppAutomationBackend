@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/storymakers",
+      "handler": "storymaker.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/storymakers/count",
+      "handler": "storymaker.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/storymakers/:id",
+      "handler": "storymaker.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/storymakers",
+      "handler": "storymaker.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/storymakers/:id",
+      "handler": "storymaker.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/storymakers/:id",
+      "handler": "storymaker.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
