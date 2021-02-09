@@ -41,21 +41,21 @@ module.exports = {
         const fileName = "fluxstore_" + uuidv4().substring(0, 8) + ".txt";
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
         const cmd = `/home/${serverEntity.username}/scripts/flux/singlevendorapp.sh ` +
-            ' -a "' + entity.appname + '"' +
-            ' -b "' + entity.baseUrl + '"' +
-            ' -k "' + entity.consumerKey + '"' +
-            ' -s "' + entity.consumerSecret + '"' +
-            ' -r "' + entity.razorpayKey + '"' +
-            ' -p "' + entity.phone + '"' +
-            ' -e "' + entity.email + '"' +
-            ' -o "' + entity.packageName + '"' +
-            ' -m "' + entity.mapApi + '"' +
-            (entity.appIcon ? ' -l "' + host + entity.appIcon.url + '"' : '') +
-            (entity.headerLogo ? ' -h "' + host + entity.headerLogo.url + '"' : '') +
-            (entity.splashImage ? ' -n "' + host + entity.splashImage.url + '"' : '') +
-            (entity.googleJson ? ' -g "' + host + entity.googleJson.url + '"' : '') +
-            ' -c "' + entity.versionCode + '"' +
-            ' -v "' + entity.versionName + '"' +
+        ' -a "' + entity.appname + '"' +
+        ' -b "' + entity.baseUrl + '"' +
+        ' -k "' + entity.consumerKey + '"' +
+        ' -s "' + entity.consumerSecret + '"' +
+        ' -o "' + entity.packageName + '"' +
+        (entity.razorpayKey ? ' -r "' + entity.razorpayKey + '"' : '') +
+        (entity.phone ? ' -p "' + entity.phone + '"' : '') +
+        (entity.email ? ' -e "' + entity.email + '"' : '') +
+        (entity.mapApi ? ' -m "' + entity.mapApi + '"' : '') +
+        (entity.appIcon ? ' -l "' + host + entity.appIcon.url + '"' : '') +
+        (entity.headerLogo ? ' -h "' + host + entity.headerLogo.url + '"' : '') +
+        (entity.splashImage ? ' -n "' + host + entity.splashImage.url + '"' : '') +
+        (entity.googleJson ? ' -g "' + host + entity.googleJson.url + '"' : '') +
+        (entity.versionCode ? ' -c "' + entity.versionCode + '"' : '') +
+        (entity.versionName ? ' -v "' + entity.versionName + '"' : '') +
             ' > ../process/' + fileName;
 
         console.log("Command: ", cmd);
