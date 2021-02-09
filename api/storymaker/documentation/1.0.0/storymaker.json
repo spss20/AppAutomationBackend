@@ -518,7 +518,8 @@
         "required": [
           "id",
           "icon",
-          "config"
+          "config",
+          "packageName"
         ],
         "properties": {
           "id": {
@@ -661,6 +662,15 @@
               }
             }
           },
+          "packageName": {
+            "type": "string"
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -668,9 +678,21 @@
         }
       },
       "NewStorymaker": {
+        "required": [
+          "packageName"
+        ],
         "properties": {
           "appName": {
             "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",

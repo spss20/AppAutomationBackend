@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "storymakers",
   "info": {
-    "name": "Storymaker"
+    "name": "Storymaker",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -30,6 +31,17 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "packageName": {
+      "type": "string",
+      "required": true,
+      "regex": "^([A-Za-z]{1}[A-Za-z\\d_]*\\.)+[A-Za-z][A-Za-z\\d_]*$"
+    },
+    "versionCode": {
+      "type": "integer"
+    },
+    "versionName": {
+      "type": "decimal"
     }
   }
 }

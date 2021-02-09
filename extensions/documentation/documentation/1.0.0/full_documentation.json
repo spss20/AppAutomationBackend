@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/06/2021 5:23:00 PM"
+    "x-generation-date": "02/09/2021 7:19:52 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13132,7 +13132,8 @@
         "required": [
           "id",
           "icon",
-          "config"
+          "config",
+          "packageName"
         ],
         "properties": {
           "id": {
@@ -13275,6 +13276,15 @@
               }
             }
           },
+          "packageName": {
+            "type": "string"
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -13282,9 +13292,21 @@
         }
       },
       "NewStorymaker": {
+        "required": [
+          "packageName"
+        ],
         "properties": {
           "appName": {
             "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "number"
           },
           "published_at": {
             "type": "string",
