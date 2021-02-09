@@ -48,8 +48,11 @@ module.exports = {
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
         const cmd = `~/scripts/storymaker/makeuserapp.sh ` +
             ' -a "' + entity.appName + '"' +
+            ' -p "' + entity.packageName + '"' +
             (entity.icon ? ' -i "' + host + entity.icon.url + '"' : '') +
             (entity.config ? ' -c "' + host + entity.config.url + '"' : '') +
+            (entity.versionCode ? ' -x "' + entity.versonCode + '"' : '') +
+            (entity.versionName ? ' -v "' + entity.versionName + '"' : '') +
             ' > ../process/' + fileName;
 
         console.log("Command: ", cmd);
