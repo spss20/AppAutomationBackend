@@ -51,7 +51,7 @@ module.exports = {
             ' -p "' + entity.packageName + '"' +
             (entity.icon ? ' -i "' + host + entity.icon.url + '"' : '') +
             (entity.config ? ' -c "' + host + entity.config.url + '"' : '') +
-            (entity.versionCode ? ' -x "' + entity.versonCode + '"' : '') +
+            (entity.versionCode ? ' -x "' + entity.versionCode + '"' : '') +
             (entity.versionName ? ' -v "' + entity.versionName + '"' : '') +
             ' > ../process/' + fileName;
 
