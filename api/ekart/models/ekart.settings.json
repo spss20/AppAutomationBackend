@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ekarts",
+  "info": {
+    "name": "Ekart",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "appName": {
+      "type": "string",
+      "required": true
+    },
+    "baseUrl": {
+      "type": "string",
+      "required": true
+    },
+    "packageName": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "splashImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "googleJson": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "versionCode": {
+      "type": "integer"
+    },
+    "versionName": {
+      "type": "string"
+    }
+  }
+}

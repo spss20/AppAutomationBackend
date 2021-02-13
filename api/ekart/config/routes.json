@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ekarts",
+      "handler": "ekart.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ekarts/count",
+      "handler": "ekart.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ekarts/:id",
+      "handler": "ekart.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ekarts",
+      "handler": "ekart.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ekarts/:id",
+      "handler": "ekart.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ekarts/:id",
+      "handler": "ekart.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
