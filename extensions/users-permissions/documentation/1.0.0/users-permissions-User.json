@@ -1467,6 +1467,126 @@
                 "type": "string"
               }
             }
+          },
+          "fbgrocery": {
+            "required": [
+              "id",
+              "appName",
+              "packageName",
+              "icon",
+              "splash",
+              "googleJson",
+              "appType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "dynamicLink": {
+                "type": "string"
+              },
+              "lowInventory": {
+                "type": "integer"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splash": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "razorpayKey": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "appType": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "ekart": {
+            "required": [
+              "id",
+              "appName",
+              "baseUrl",
+              "packageName",
+              "icon",
+              "splashImage",
+              "googleJson",
+              "appType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "appType": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1523,6 +1643,12 @@
             "type": "string"
           },
           "fluxstore_multivendor": {
+            "type": "string"
+          },
+          "fbgrocery": {
+            "type": "string"
+          },
+          "ekart": {
             "type": "string"
           },
           "created_by": {

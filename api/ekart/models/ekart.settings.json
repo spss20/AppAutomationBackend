@@ -55,6 +55,19 @@
     },
     "versionName": {
       "type": "string"
+    },
+    "appType": {
+      "type": "enumeration",
+      "enum": [
+        "user",
+        "delivery"
+      ],
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "ekart"
     }
   }
 }

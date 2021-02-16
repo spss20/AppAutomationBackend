@@ -11,28 +11,32 @@ module.exports = {
 
     async create(ctx) {
 
-        // //getting user id
-        // const { id } = await strapi.plugins[
-        //     'users-permissions'
-        // ].services.jwt.getToken(ctx);
+        //getting user id
+        const { id } = await strapi.plugins[
+            'users-permissions'
+        ].services.jwt.getToken(ctx);
 
         //Create database entry
         let entity;
         if (ctx.is('multipart')) {
             const { data, files } = parseMultipartData(ctx);
-            // data.user = [id];
+            data.user = [id];
             entity = await strapi.services.ekart.create(data, { files });
         } else {
-            // ctx.request.body.user = [id];
+            ctx.request.body.user = [id];
             entity = await strapi.services.ekart.create(ctx.request.body);
         }
 
-        //validation
-        if (entity.icon == null) {
-            return {
-                "status": 400,
-                "error": "Cannot call api without app logo"
-            };
+        //Just for change
+        let scriptFile;
+        switch (entity.appType) {
+            case "user":
+                scriptFile = "makeuserapp.sh"
+                break
+
+            case "delivery":
+                scriptFile = "makedeliveryapp.sh"
+                break
         }
         
         //find website server 
@@ -41,7 +45,7 @@ module.exports = {
         //Preparing Command
         const fileName = "ekart_" + uuidv4().substring(0, 8) + ".txt";
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
-        const cmd = `~/scripts/ekart/makeuserapp.sh ` +
+        const cmd = `~/scripts/ekart/${scriptFile} ` +
             ' -a "' + entity.appName + '"' +
             ' -b "' + entity.baseUrl + '"' +
             ' -p "' + entity.packageName + '"' +

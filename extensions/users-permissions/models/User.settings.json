@@ -75,6 +75,14 @@
     "fluxstore_multivendor": {
       "via": "user",
       "model": "fluxstore-multivendor"
+    },
+    "fbgrocery": {
+      "via": "user",
+      "model": "fbgrocery"
+    },
+    "ekart": {
+      "via": "user",
+      "model": "ekart"
     }
   }
 }

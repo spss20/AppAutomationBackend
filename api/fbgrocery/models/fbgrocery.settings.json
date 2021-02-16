@@ -75,6 +75,11 @@
         "admin"
       ],
       "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "fbgrocery"
     }
   }
 }

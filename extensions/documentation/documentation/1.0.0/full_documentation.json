@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/13/2021 5:24:32 PM"
+    "x-generation-date": "02/16/2021 12:14:46 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -11610,6 +11610,12 @@
               "fluxstore_multivendor": {
                 "type": "string"
               },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -12053,7 +12059,8 @@
           "packageName",
           "icon",
           "splashImage",
-          "googleJson"
+          "googleJson",
+          "appType"
         ],
         "properties": {
           "id": {
@@ -12275,6 +12282,80 @@
           "versionName": {
             "type": "string"
           },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "delivery"
+            ]
+          },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "phone"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "cpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "fluxstore": {
+                "type": "string"
+              },
+              "fluxstore_multivendor": {
+                "type": "string"
+              },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -12285,7 +12366,8 @@
         "required": [
           "appName",
           "baseUrl",
-          "packageName"
+          "packageName",
+          "appType"
         ],
         "properties": {
           "appName": {
@@ -12301,6 +12383,16 @@
             "type": "integer"
           },
           "versionName": {
+            "type": "string"
+          },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "delivery"
+            ]
+          },
+          "user": {
             "type": "string"
           },
           "published_at": {
@@ -12562,6 +12654,73 @@
               "admin"
             ]
           },
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "phone"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "cpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "fluxstore": {
+                "type": "string"
+              },
+              "fluxstore_multivendor": {
+                "type": "string"
+              },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -12606,6 +12765,9 @@
               "delivery",
               "admin"
             ]
+          },
+          "user": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -12994,6 +13156,12 @@
                 "type": "string"
               },
               "fluxstore_multivendor": {
+                "type": "string"
+              },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
                 "type": "string"
               },
               "created_by": {
@@ -13442,6 +13610,12 @@
                 "type": "string"
               },
               "fluxstore_multivendor": {
+                "type": "string"
+              },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
                 "type": "string"
               },
               "created_by": {
@@ -14416,6 +14590,12 @@
               "fluxstore_multivendor": {
                 "type": "string"
               },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14595,6 +14775,12 @@
                 "type": "string"
               },
               "fluxstore_multivendor": {
+                "type": "string"
+              },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
                 "type": "string"
               },
               "created_by": {
@@ -14999,6 +15185,12 @@
                 "fluxstore_multivendor": {
                   "type": "string"
                 },
+                "fbgrocery": {
+                  "type": "string"
+                },
+                "ekart": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -15328,6 +15520,126 @@
                 "type": "string"
               }
             }
+          },
+          "fbgrocery": {
+            "required": [
+              "id",
+              "appName",
+              "packageName",
+              "icon",
+              "splash",
+              "googleJson",
+              "appType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "dynamicLink": {
+                "type": "string"
+              },
+              "lowInventory": {
+                "type": "integer"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splash": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "razorpayKey": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "appType": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "ekart": {
+            "required": [
+              "id",
+              "appName",
+              "baseUrl",
+              "packageName",
+              "icon",
+              "splashImage",
+              "googleJson",
+              "appType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "appType": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -15384,6 +15696,12 @@
             "type": "string"
           },
           "fluxstore_multivendor": {
+            "type": "string"
+          },
+          "fbgrocery": {
+            "type": "string"
+          },
+          "ekart": {
             "type": "string"
           },
           "created_by": {

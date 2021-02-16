@@ -904,6 +904,12 @@
               "fluxstore_multivendor": {
                 "type": "string"
               },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
