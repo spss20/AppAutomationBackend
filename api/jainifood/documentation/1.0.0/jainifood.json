@@ -520,7 +520,6 @@
           "appName",
           "baseUrl",
           "packageName",
-          "razorpayKey",
           "icon",
           "splashImage",
           "googleJson",
@@ -837,7 +836,6 @@
           "appName",
           "baseUrl",
           "packageName",
-          "razorpayKey",
           "appType"
         ],
         "properties": {

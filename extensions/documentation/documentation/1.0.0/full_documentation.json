@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/17/2021 1:56:12 PM"
+    "x-generation-date": "02/17/2021 3:07:26 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -14221,7 +14221,6 @@
           "appName",
           "baseUrl",
           "packageName",
-          "razorpayKey",
           "icon",
           "splashImage",
           "googleJson",
@@ -14538,7 +14537,6 @@
           "appName",
           "baseUrl",
           "packageName",
-          "razorpayKey",
           "appType"
         ],
         "properties": {
@@ -16549,7 +16547,6 @@
               "appName",
               "baseUrl",
               "packageName",
-              "razorpayKey",
               "icon",
               "splashImage",
               "googleJson",
