@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/ekarts": {
+    "/jainifoods": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Ekart"
+                    "$ref": "#/components/schemas/Jainifood"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Ekart"
+          "Jainifood"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ekart"
+                  "$ref": "#/components/schemas/Jainifood"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Ekart"
+          "Jainifood"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEkart"
+                "$ref": "#/components/schemas/NewJainifood"
               }
             }
           }
         }
       }
     },
-    "/ekarts/count": {
+    "/jainifoods/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Ekart"
+          "Jainifood"
         ],
         "parameters": []
       }
     },
-    "/ekarts/{id}": {
+    "/jainifoods/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ekart"
+                  "$ref": "#/components/schemas/Jainifood"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Ekart"
+          "Jainifood"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Ekart"
+                  "$ref": "#/components/schemas/Jainifood"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Ekart"
+          "Jainifood"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewEkart"
+                "$ref": "#/components/schemas/NewJainifood"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Ekart"
+          "Jainifood"
         ],
         "parameters": [
           {
@@ -514,12 +514,13 @@
   },
   "components": {
     "schemas": {
-      "Ekart": {
+      "Jainifood": {
         "required": [
           "id",
           "appName",
           "baseUrl",
           "packageName",
+          "razorpayKey",
           "icon",
           "splashImage",
           "googleJson",
@@ -536,6 +537,9 @@
             "type": "string"
           },
           "packageName": {
+            "type": "string"
+          },
+          "razorpayKey": {
             "type": "string"
           },
           "icon": {
@@ -828,11 +832,12 @@
           }
         }
       },
-      "NewEkart": {
+      "NewJainifood": {
         "required": [
           "appName",
           "baseUrl",
           "packageName",
+          "razorpayKey",
           "appType"
         ],
         "properties": {
@@ -843,6 +848,9 @@
             "type": "string"
           },
           "packageName": {
+            "type": "string"
+          },
+          "razorpayKey": {
             "type": "string"
           },
           "versionCode": {
@@ -877,7 +885,7 @@
   },
   "tags": [
     {
-      "name": "Ekart"
+      "name": "Jainifood"
     }
   ]
 }

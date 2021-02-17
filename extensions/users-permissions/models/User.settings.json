@@ -83,6 +83,10 @@
     "ekart": {
       "via": "user",
       "model": "ekart"
+    },
+    "jainifood": {
+      "via": "user",
+      "model": "jainifood"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/jainifoods",
+      "handler": "jainifood.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jainifoods/count",
+      "handler": "jainifood.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/jainifoods/:id",
+      "handler": "jainifood.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/jainifoods",
+      "handler": "jainifood.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/jainifoods/:id",
+      "handler": "jainifood.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/jainifoods/:id",
+      "handler": "jainifood.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

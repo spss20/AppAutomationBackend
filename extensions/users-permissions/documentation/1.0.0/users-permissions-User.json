@@ -1587,6 +1587,66 @@
                 "type": "string"
               }
             }
+          },
+          "jainifood": {
+            "required": [
+              "id",
+              "appName",
+              "baseUrl",
+              "packageName",
+              "razorpayKey",
+              "icon",
+              "splashImage",
+              "googleJson",
+              "appType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "razorpayKey": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "appType": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1649,6 +1709,9 @@
             "type": "string"
           },
           "ekart": {
+            "type": "string"
+          },
+          "jainifood": {
             "type": "string"
           },
           "created_by": {

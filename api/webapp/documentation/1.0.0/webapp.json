@@ -667,6 +667,9 @@
               "ekart": {
                 "type": "string"
               },
+              "jainifood": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
