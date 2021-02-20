@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/20/2021 2:02:14 PM"
+    "x-generation-date": "02/20/2021 3:23:35 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -15094,8 +15094,7 @@
       "Orders": {
         "required": [
           "id",
-          "config",
-          "productSlug"
+          "config"
         ],
         "properties": {
           "id": {
@@ -15171,11 +15170,46 @@
           "outputUrl": {
             "type": "string"
           },
-          "productSlug": {
-            "type": "string"
-          },
           "orderId": {
             "type": "integer"
+          },
+          "subproduct": {
+            "required": [
+              "id",
+              "apischema"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "product": {
+                "type": "string"
+              },
+              "apischema": {
+                "type": "object"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -15184,18 +15218,15 @@
         }
       },
       "NewOrders": {
-        "required": [
-          "productSlug"
-        ],
         "properties": {
           "outputUrl": {
             "type": "string"
           },
-          "productSlug": {
-            "type": "string"
-          },
           "orderId": {
             "type": "integer"
+          },
+          "subproduct": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
