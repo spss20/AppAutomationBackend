@@ -1244,6 +1244,9 @@
                   "type": "string"
                 }
               },
+              "hungry": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
