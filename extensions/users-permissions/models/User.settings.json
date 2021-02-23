@@ -87,6 +87,10 @@
     "jainifood": {
       "via": "user",
       "model": "jainifood"
+    },
+    "smartervision": {
+      "via": "user",
+      "model": "smartervision"
     }
   }
 }

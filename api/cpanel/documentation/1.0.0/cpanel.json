@@ -608,6 +608,9 @@
               "jainifood": {
                 "type": "string"
               },
+              "smartervision": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

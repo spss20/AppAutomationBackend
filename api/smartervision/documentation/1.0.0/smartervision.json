@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/tests": {
+    "/smartervisions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Test"
+                    "$ref": "#/components/schemas/Smartervision"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Test"
+          "Smartervision"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Test"
+                  "$ref": "#/components/schemas/Smartervision"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Test"
+          "Smartervision"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTest"
+                "$ref": "#/components/schemas/NewSmartervision"
               }
             }
           }
         }
       }
     },
-    "/tests/count": {
+    "/smartervisions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Test"
+          "Smartervision"
         ],
         "parameters": []
       }
     },
-    "/tests/{id}": {
+    "/smartervisions/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Test"
+                  "$ref": "#/components/schemas/Smartervision"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Test"
+          "Smartervision"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Test"
+                  "$ref": "#/components/schemas/Smartervision"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Test"
+          "Smartervision"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTest"
+                "$ref": "#/components/schemas/NewSmartervision"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Test"
+          "Smartervision"
         ],
         "parameters": [
           {
@@ -514,18 +514,33 @@
   },
   "components": {
     "schemas": {
-      "Test": {
+      "Smartervision": {
         "required": [
-          "id"
+          "id",
+          "appName",
+          "baseUrl",
+          "packageName",
+          "icon",
+          "googleJson",
+          "appType"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "string": {
+          "appName": {
             "type": "string"
           },
-          "image": {
+          "baseUrl": {
+            "type": "string"
+          },
+          "mapApi": {
+            "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "icon": {
             "required": [
               "id",
               "name",
@@ -592,7 +607,155 @@
               }
             }
           },
-          "user_id": {
+          "splashImage": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "googleJson": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "string"
+          },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "vendor",
+              "delivery"
+            ]
+          },
+          "user": {
             "required": [
               "id",
               "username",
@@ -671,12 +834,41 @@
           }
         }
       },
-      "NewTest": {
+      "NewSmartervision": {
+        "required": [
+          "appName",
+          "baseUrl",
+          "packageName",
+          "appType"
+        ],
         "properties": {
-          "string": {
+          "appName": {
             "type": "string"
           },
-          "user_id": {
+          "baseUrl": {
+            "type": "string"
+          },
+          "mapApi": {
+            "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "versionCode": {
+            "type": "integer"
+          },
+          "versionName": {
+            "type": "string"
+          },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "vendor",
+              "delivery"
+            ]
+          },
+          "user": {
             "type": "string"
           },
           "published_at": {
@@ -695,7 +887,7 @@
   },
   "tags": [
     {
-      "name": "Test"
+      "name": "Smartervision"
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/smartervisions",
+      "handler": "smartervision.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/smartervisions/count",
+      "handler": "smartervision.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/smartervisions/:id",
+      "handler": "smartervision.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/smartervisions",
+      "handler": "smartervision.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/smartervisions/:id",
+      "handler": "smartervision.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/smartervisions/:id",
+      "handler": "smartervision.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

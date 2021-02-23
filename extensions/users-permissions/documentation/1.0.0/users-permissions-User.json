@@ -1649,6 +1649,64 @@
                 "type": "string"
               }
             }
+          },
+          "smartervision": {
+            "required": [
+              "id",
+              "appName",
+              "baseUrl",
+              "packageName",
+              "icon",
+              "googleJson",
+              "appType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "mapApi": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "appType": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1714,6 +1772,9 @@
             "type": "string"
           },
           "jainifood": {
+            "type": "string"
+          },
+          "smartervision": {
             "type": "string"
           },
           "created_by": {
