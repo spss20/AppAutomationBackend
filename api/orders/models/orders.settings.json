@@ -41,6 +41,10 @@
       ],
       "plugin": "upload",
       "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "role"
     }
   }
 }
