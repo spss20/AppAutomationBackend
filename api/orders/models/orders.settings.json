@@ -28,6 +28,19 @@
     },
     "subproduct": {
       "model": "subproduct"
+    },
+    "orderName": {
+      "type": "string",
+      "required": true
+    },
+    "orderImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
     }
   }
 }
