@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/25/2021 10:11:21 AM"
+    "x-generation-date": "02/25/2021 10:56:45 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -16976,34 +16976,66 @@
           "user": {
             "required": [
               "id",
-              "name"
+              "username",
+              "email",
+              "phone"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "username": {
                 "type": "string"
               },
-              "description": {
+              "email": {
                 "type": "string"
               },
-              "type": {
+              "provider": {
                 "type": "string"
               },
-              "permissions": {
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "users": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "phone": {
+                "type": "integer"
               },
-              "hungry": {
+              "fluxstore": {
+                "type": "string"
+              },
+              "fluxstore_multivendor": {
+                "type": "string"
+              },
+              "fbgrocery": {
+                "type": "string"
+              },
+              "ekart": {
+                "type": "string"
+              },
+              "jainifood": {
+                "type": "string"
+              },
+              "smartervision": {
                 "type": "string"
               },
               "created_by": {

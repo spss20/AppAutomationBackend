@@ -44,7 +44,7 @@
     },
     "user": {
       "plugin": "users-permissions",
-      "model": "role"
+      "model": "user"
     }
   }
 }
