@@ -1291,12 +1291,6 @@
                 "server": {
                   "type": "string"
                 },
-                "webpanels": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "adminpanels": {
                   "type": "array",
                   "items": {
@@ -1413,7 +1407,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "dokan",
+                  "wcfm"
+                ]
               },
               "baseUrl": {
                 "type": "string"
@@ -1519,7 +1517,12 @@
                 "type": "string"
               },
               "appType": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "user",
+                  "delivery",
+                  "admin"
+                ]
               },
               "user": {
                 "type": "string"
@@ -1575,7 +1578,11 @@
                 "type": "string"
               },
               "appType": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "user",
+                  "delivery"
+                ]
               },
               "user": {
                 "type": "string"
@@ -1634,7 +1641,11 @@
                 "type": "string"
               },
               "appType": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "user",
+                  "delivery"
+                ]
               },
               "user": {
                 "type": "string"
@@ -1692,7 +1703,12 @@
                 "type": "string"
               },
               "appType": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "user",
+                  "vendor",
+                  "delivery"
+                ]
               },
               "user": {
                 "type": "string"

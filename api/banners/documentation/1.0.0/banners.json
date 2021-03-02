@@ -628,7 +628,13 @@
                 }
               },
               "tag": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "none",
+                  "popular",
+                  "trending",
+                  "newest"
+                ]
               },
               "short_description": {
                 "type": "string"

@@ -635,7 +635,11 @@
                 "type": "string"
               },
               "type": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "website",
+                  "apps"
+                ]
               },
               "priority": {
                 "type": "integer"
@@ -657,45 +661,6 @@
               },
               "updated_by": {
                 "type": "string"
-              }
-            }
-          },
-          "webpanels": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "company_name",
-                "company_logo"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "cpanel": {
-                  "type": "string"
-                },
-                "subdomain": {
-                  "type": "string"
-                },
-                "company_name": {
-                  "type": "string"
-                },
-                "company_logo": {
-                  "type": "string"
-                },
-                "product": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
               }
             }
           },
@@ -777,12 +742,6 @@
           },
           "server": {
             "type": "string"
-          },
-          "webpanels": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "adminpanels": {
             "type": "array",

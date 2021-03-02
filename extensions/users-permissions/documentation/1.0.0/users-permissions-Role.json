@@ -647,7 +647,11 @@
                 "type": "string"
               },
               "appType": {
-                "type": "string"
+                "type": "string",
+                "enum": [
+                  "user",
+                  "delivery"
+                ]
               },
               "published_at": {
                 "type": "string"
