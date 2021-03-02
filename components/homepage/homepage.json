@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_homepage_homepages",
+  "info": {
+    "name": "Homepage",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Test": {
+      "type": "string"
+    }
+  }
+}

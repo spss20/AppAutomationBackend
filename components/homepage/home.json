@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_homepage_homes",
+  "info": {
+    "name": "home",
+    "icon": "ambulance"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Index": {
+      "type": "string"
+    },
+    "Data": {
+      "type": "string"
+    }
+  }
+}

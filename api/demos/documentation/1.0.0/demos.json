@@ -721,6 +721,9 @@
               "isAutomated": {
                 "type": "boolean"
               },
+              "isAdminPanel": {
+                "type": "boolean"
+              },
               "published_at": {
                 "type": "string"
               },
