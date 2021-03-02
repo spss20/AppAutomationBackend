@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "static_pages",
+  "info": {
+    "name": "static_pages"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "privacy_policy": {
+      "type": "richtext"
+    },
+    "terms_condition": {
+      "type": "richtext"
+    },
+    "about_us": {
+      "type": "richtext"
+    }
+  }
+}

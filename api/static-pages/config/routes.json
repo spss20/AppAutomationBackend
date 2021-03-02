@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/static-pages",
+      "handler": "static-pages.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/static-pages",
+      "handler": "static-pages.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/static-pages",
+      "handler": "static-pages.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
