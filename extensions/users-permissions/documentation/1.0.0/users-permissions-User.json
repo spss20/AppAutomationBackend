@@ -1255,60 +1255,6 @@
               }
             }
           },
-          "cpanels": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "username",
-                "password",
-                "email",
-                "domain",
-                "client_name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "password": {
-                  "type": "string"
-                },
-                "email": {
-                  "type": "string"
-                },
-                "domain": {
-                  "type": "string"
-                },
-                "client_name": {
-                  "type": "string"
-                },
-                "user_id": {
-                  "type": "string"
-                },
-                "server": {
-                  "type": "string"
-                },
-                "adminpanels": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "phone": {
             "type": "integer"
           },
@@ -1723,6 +1669,114 @@
                 "type": "string"
               }
             }
+          },
+          "cpanels": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "username",
+                "password",
+                "email",
+                "domain",
+                "client_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "domain": {
+                  "type": "string"
+                },
+                "client_name": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "server": {
+                  "type": "string"
+                },
+                "adminpanels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "allinone": {
+            "required": [
+              "id",
+              "appName",
+              "baseUrl",
+              "packageName",
+              "icon",
+              "googleJson"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appName": {
+                "type": "string"
+              },
+              "baseUrl": {
+                "type": "string"
+              },
+              "packageName": {
+                "type": "string"
+              },
+              "mapApi": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "splashImage": {
+                "type": "string"
+              },
+              "googleJson": {
+                "type": "string"
+              },
+              "versionCode": {
+                "type": "integer"
+              },
+              "versionName": {
+                "type": "string"
+              },
+              "user": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -1766,12 +1820,6 @@
           "role": {
             "type": "string"
           },
-          "cpanels": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "phone": {
             "type": "integer"
           },
@@ -1791,6 +1839,15 @@
             "type": "string"
           },
           "smartervision": {
+            "type": "string"
+          },
+          "cpanels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allinone": {
             "type": "string"
           },
           "created_by": {

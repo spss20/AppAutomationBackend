@@ -35,6 +35,7 @@ module.exports = {
 
         let entities;
         ctx.query.user = id;
+        ctx.query._sort = "id:DESC";
         if (ctx.query._q) {
             console.log("Query ", ctx.query)
             entities = await strapi.services.orders.search(ctx.query);
@@ -52,10 +53,13 @@ module.exports = {
         const userData = await strapi.plugins[
             'users-permissions'
         ].services.jwt.getToken(ctx);
-        console.log("User id is ", userData.id)
 
-        if (userData.id == id) {
-            const entity = await strapi.services.orders.findOne({ id });
+        const entity = await strapi.services.orders.findOne({ id });
+        if (entity == null){
+            return null
+         }
+         
+        if (entity.user.id == userData.id) {
             return sanitizeEntity(entity, { model: strapi.models.orders });
         } else {
             ctx.status = 403

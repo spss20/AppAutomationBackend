@@ -546,7 +546,7 @@
           "client_name": {
             "type": "string"
           },
-          "user_id": {
+          "user": {
             "required": [
               "id",
               "username",
@@ -584,12 +584,6 @@
               "role": {
                 "type": "string"
               },
-              "cpanels": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "phone": {
                 "type": "integer"
               },
@@ -609,6 +603,15 @@
                 "type": "string"
               },
               "smartervision": {
+                "type": "string"
+              },
+              "cpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinone": {
                 "type": "string"
               },
               "created_by": {
@@ -737,7 +740,7 @@
           "client_name": {
             "type": "string"
           },
-          "user_id": {
+          "user": {
             "type": "string"
           },
           "server": {

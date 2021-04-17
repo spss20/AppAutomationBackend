@@ -552,7 +552,7 @@
               "client_name": {
                 "type": "string"
               },
-              "user_id": {
+              "user": {
                 "type": "string"
               },
               "server": {

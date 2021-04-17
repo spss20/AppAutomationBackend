@@ -12,8 +12,8 @@
   },
   "attributes": {
     "cpanel": {
-      "model": "cpanel",
-      "via": "adminpanels"
+      "via": "adminpanels",
+      "model": "cpanel"
     },
     "subdomain": {
       "type": "string"

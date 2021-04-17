@@ -799,12 +799,6 @@
               "role": {
                 "type": "string"
               },
-              "cpanels": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "phone": {
                 "type": "integer"
               },
@@ -824,6 +818,15 @@
                 "type": "string"
               },
               "smartervision": {
+                "type": "string"
+              },
+              "cpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinone": {
                 "type": "string"
               },
               "created_by": {

@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "allinones",
+  "info": {
+    "name": "Allinone"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "appName": {
+      "type": "string",
+      "required": true
+    },
+    "baseUrl": {
+      "type": "string",
+      "required": true
+    },
+    "packageName": {
+      "type": "string",
+      "required": true
+    },
+    "mapApi": {
+      "type": "string"
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "splashImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "googleJson": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "versionCode": {
+      "type": "integer"
+    },
+    "versionName": {
+      "type": "string"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "allinone"
+    }
+  }
+}

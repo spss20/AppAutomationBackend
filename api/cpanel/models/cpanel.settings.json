@@ -38,7 +38,7 @@
       "type": "string",
       "required": true
     },
-    "user_id": {
+    "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "cpanels"
@@ -47,8 +47,8 @@
       "model": "server"
     },
     "adminpanels": {
-      "via": "cpanel",
-      "collection": "adminpanels"
+      "collection": "adminpanels",
+      "via": "cpanel"
     }
   }
 }

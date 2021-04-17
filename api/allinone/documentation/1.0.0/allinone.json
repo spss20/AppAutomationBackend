@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/orders": {
+    "/allinones": {
       "get": {
         "deprecated": false,
-        "description": "Find all the orders's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Orders"
+                    "$ref": "#/components/schemas/Allinone"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Allinone"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new orders record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Orders"
+                  "$ref": "#/components/schemas/Allinone"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Allinone"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrders"
+                "$ref": "#/components/schemas/NewAllinone"
               }
             }
           }
         }
       }
     },
-    "/orders/count": {
+    "/allinones/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of orders documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Allinone"
         ],
         "parameters": []
       }
     },
-    "/orders/{id}": {
+    "/allinones/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one orders record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Orders"
+                  "$ref": "#/components/schemas/Allinone"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Allinone"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single orders record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve orders document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Orders"
+                  "$ref": "#/components/schemas/Allinone"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Allinone"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewOrders"
+                "$ref": "#/components/schemas/NewAllinone"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single orders record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single orders based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Orders"
+          "Allinone"
         ],
         "parameters": [
           {
@@ -514,18 +514,32 @@
   },
   "components": {
     "schemas": {
-      "Orders": {
+      "Allinone": {
         "required": [
           "id",
-          "config",
-          "orderName",
-          "orderImage"
+          "appName",
+          "baseUrl",
+          "packageName",
+          "icon",
+          "googleJson"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "config": {
+          "appName": {
+            "type": "string"
+          },
+          "baseUrl": {
+            "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "mapApi": {
+            "type": "string"
+          },
+          "icon": {
             "required": [
               "id",
               "name",
@@ -592,119 +606,145 @@
               }
             }
           },
-          "outputUrl": {
-            "type": "string"
+          "splashImage": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "orderId": {
+          "googleJson": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "versionCode": {
             "type": "integer"
           },
-          "subproduct": {
-            "required": [
-              "id",
-              "apischema"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "images": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "product": {
-                "type": "string"
-              },
-              "apischema": {
-                "type": "object"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "orderName": {
+          "versionName": {
             "type": "string"
-          },
-          "orderImage": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "user": {
             "required": [
@@ -788,21 +828,29 @@
           }
         }
       },
-      "NewOrders": {
+      "NewAllinone": {
         "required": [
-          "orderName"
+          "appName",
+          "baseUrl",
+          "packageName"
         ],
         "properties": {
-          "outputUrl": {
+          "appName": {
             "type": "string"
           },
-          "orderId": {
+          "baseUrl": {
+            "type": "string"
+          },
+          "packageName": {
+            "type": "string"
+          },
+          "mapApi": {
+            "type": "string"
+          },
+          "versionCode": {
             "type": "integer"
           },
-          "subproduct": {
-            "type": "string"
-          },
-          "orderName": {
+          "versionName": {
             "type": "string"
           },
           "user": {
@@ -824,7 +872,7 @@
   },
   "tags": [
     {
-      "name": "Orders"
+      "name": "Allinone"
     }
   ]
 }
