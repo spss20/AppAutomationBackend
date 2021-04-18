@@ -10,7 +10,7 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = {
 
-    async createOld(ctx) {
+    async create(ctx) {
 
         //getting user id
         const { id } = await strapi.plugins[
