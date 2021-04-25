@@ -27,17 +27,20 @@ module.exports = {
             entity = await strapi.services.allinone.create(ctx.request.body);
         }
 
-        //Just for change
-        // let scriptFile;
-        // switch (entity.appType) {
-        //     case "user":
-        //         scriptFile = "makeuserapp.sh"
-        //         break
+        let scriptFile;
+        switch (entity.appType) {
+            case "user":
+                scriptFile = "makeuserapp.sh"
+                break
 
-        //     case "vendor":
-        //         scriptFile = "makevendorapp.sh"
-        //         break
-        // }
+            case "vendor":
+                scriptFile = "makevendorapp.sh"
+                break
+
+            case "delivery":
+                scriptFile = "makedeliveryapp.sh"
+                break
+        }
         
         //find website server 
         const serverEntity = await strapi.query('server').findOne({ type: 'apps' });
@@ -45,7 +48,7 @@ module.exports = {
         //Preparing Command
         const fileName = "allinone_" + uuidv4().substring(0, 8) + ".txt";
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
-        const cmd = `~/scripts/allinone/makeuserapp.sh ` +
+        const cmd = `~/scripts/allinone/${scriptFile} ` +
             ' -a "' + entity.appName + '"' +
             ' -b "' + entity.baseUrl + '"' +
             ' -p "' + entity.packageName + '"' +
@@ -53,7 +56,7 @@ module.exports = {
             (entity.icon ? ' -i "' + host + entity.icon.url + '"' : '') +
             (entity.splashImage ? ' -s "' + host + entity.splashImage.url + '"' : '') +
             (entity.googleJson ? ' -g "' + host + entity.googleJson.url + '"' : '') +
-            (entity.versionCode ? ' -x "' + entity.versionCode + '"' : '') +
+            (entity.versionCode ? ' -c "' + entity.versionCode + '"' : '') +
             (entity.versionName ? ' -v "' + entity.versionName + '"' : '') +
             ' > ../process/' + fileName;
 

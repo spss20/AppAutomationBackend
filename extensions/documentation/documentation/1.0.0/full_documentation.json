@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/18/2021 3:18:09 AM"
+    "x-generation-date": "04/26/2021 12:50:45 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -13836,7 +13836,8 @@
           "baseUrl",
           "packageName",
           "icon",
-          "googleJson"
+          "googleJson",
+          "appType"
         ],
         "properties": {
           "id": {
@@ -14137,6 +14138,14 @@
               }
             }
           },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "vendor",
+              "delivery"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -14147,7 +14156,8 @@
         "required": [
           "appName",
           "baseUrl",
-          "packageName"
+          "packageName",
+          "appType"
         ],
         "properties": {
           "appName": {
@@ -14170,6 +14180,14 @@
           },
           "user": {
             "type": "string"
+          },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "vendor",
+              "delivery"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -20083,7 +20101,8 @@
               "baseUrl",
               "packageName",
               "icon",
-              "googleJson"
+              "googleJson",
+              "appType"
             ],
             "properties": {
               "id": {
@@ -20118,6 +20137,14 @@
               },
               "user": {
                 "type": "string"
+              },
+              "appType": {
+                "type": "string",
+                "enum": [
+                  "user",
+                  "vendor",
+                  "delivery"
+                ]
               },
               "published_at": {
                 "type": "string"

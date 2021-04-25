@@ -521,7 +521,8 @@
           "baseUrl",
           "packageName",
           "icon",
-          "googleJson"
+          "googleJson",
+          "appType"
         ],
         "properties": {
           "id": {
@@ -822,6 +823,14 @@
               }
             }
           },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "vendor",
+              "delivery"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -832,7 +841,8 @@
         "required": [
           "appName",
           "baseUrl",
-          "packageName"
+          "packageName",
+          "appType"
         ],
         "properties": {
           "appName": {
@@ -855,6 +865,14 @@
           },
           "user": {
             "type": "string"
+          },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "vendor",
+              "delivery"
+            ]
           },
           "published_at": {
             "type": "string",

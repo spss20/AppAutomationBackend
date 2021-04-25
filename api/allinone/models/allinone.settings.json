@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "allinones",
   "info": {
-    "name": "Allinone"
+    "name": "Allinone",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -64,6 +65,15 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "allinone"
+    },
+    "appType": {
+      "type": "enumeration",
+      "enum": [
+        "user",
+        "vendor",
+        "delivery"
+      ],
+      "required": true
     }
   }
 }
