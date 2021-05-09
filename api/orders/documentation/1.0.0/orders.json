@@ -774,6 +774,12 @@
               "allinone": {
                 "type": "string"
               },
+              "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },

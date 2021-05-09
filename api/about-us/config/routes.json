@@ -2,24 +2,24 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/static-pages",
-      "handler": "static-pages.find",
+      "path": "/about-us",
+      "handler": "about-us.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/static-pages",
-      "handler": "static-pages.update",
+      "path": "/about-us",
+      "handler": "about-us.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/static-pages",
-      "handler": "static-pages.delete",
+      "path": "/about-us",
+      "handler": "about-us.delete",
       "config": {
         "policies": []
       }

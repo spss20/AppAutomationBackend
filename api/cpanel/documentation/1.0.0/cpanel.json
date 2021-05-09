@@ -614,6 +614,12 @@
               "allinone": {
                 "type": "string"
               },
+              "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -692,6 +698,9 @@
                   "type": "string"
                 },
                 "product": {
+                  "type": "string"
+                },
+                "user": {
                   "type": "string"
                 },
                 "published_at": {

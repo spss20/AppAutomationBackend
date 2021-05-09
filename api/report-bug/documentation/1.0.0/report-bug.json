@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/homepage-items": {
+    "/report-bugs": {
       "get": {
         "deprecated": false,
-        "description": "Find all the homepage-items's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve homepage-items document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Homepage-items"
+          "Report-bug"
         ],
         "parameters": [
           {
@@ -195,10 +195,10 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new homepage-items record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve homepage-items document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Homepage-items"
+          "Report-bug"
         ],
         "requestBody": {
           "description": "",
@@ -252,20 +252,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewHomepage-items"
+                "$ref": "#/components/schemas/NewReport-bug"
               }
             }
           }
         }
       }
     },
-    "/homepage-items/count": {
+    "/report-bugs/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of homepage-items documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve homepage-items document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -311,18 +311,18 @@
         },
         "summary": "",
         "tags": [
-          "Homepage-items"
+          "Report-bug"
         ],
         "parameters": []
       }
     },
-    "/homepage-items/{id}": {
+    "/report-bugs/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one homepage-items record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve homepage-items document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Homepage-items"
+          "Report-bug"
         ],
         "parameters": [
           {
@@ -385,10 +385,10 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single homepage-items record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve homepage-items document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Homepage-items"
+          "Report-bug"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewHomepage-items"
+                "$ref": "#/components/schemas/NewReport-bug"
               }
             }
           }
@@ -462,10 +462,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single homepage-items record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single homepage-items based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Homepage-items"
+          "Report-bug"
         ],
         "parameters": [
           {
@@ -527,30 +527,21 @@
   },
   "components": {
     "schemas": {
-      "Homepage-items": {
+      "Report-bug": {
         "required": [
-          "id"
+          "id",
+          "description",
+          "reproduce"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "Homepage": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Test": {
-                  "type": "string"
-                }
-              }
-            }
+          "description": {
+            "type": "string"
+          },
+          "reproduce": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -558,24 +549,17 @@
           }
         }
       },
-      "NewHomepage-items": {
+      "NewReport-bug": {
+        "required": [
+          "description",
+          "reproduce"
+        ],
         "properties": {
-          "Homepage": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Test": {
-                  "type": "string"
-                }
-              }
-            }
+          "description": {
+            "type": "string"
+          },
+          "reproduce": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

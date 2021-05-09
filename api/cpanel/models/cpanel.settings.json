@@ -47,8 +47,8 @@
       "model": "server"
     },
     "adminpanels": {
-      "collection": "adminpanels",
-      "via": "cpanel"
+      "via": "cpanel",
+      "collection": "adminpanels"
     }
   }
 }

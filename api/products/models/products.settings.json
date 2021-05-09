@@ -69,10 +69,14 @@
       "required": false
     },
     "isAutomated": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": false
     },
     "isAdminPanel": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   }
 }

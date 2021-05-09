@@ -587,7 +587,9 @@
           "id",
           "name",
           "description",
-          "tag"
+          "tag",
+          "isAutomated",
+          "isAdminPanel"
         ],
         "properties": {
           "id": {
@@ -830,10 +832,12 @@
             }
           },
           "isAutomated": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "isAdminPanel": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",
@@ -845,7 +849,9 @@
         "required": [
           "name",
           "description",
-          "tag"
+          "tag",
+          "isAutomated",
+          "isAdminPanel"
         ],
         "properties": {
           "name": {
@@ -883,10 +889,12 @@
             "type": "string"
           },
           "isAutomated": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "isAdminPanel": {
-            "type": "boolean"
+            "type": "boolean",
+            "default": false
           },
           "published_at": {
             "type": "string",

@@ -95,6 +95,10 @@
     "allinone": {
       "via": "user",
       "model": "allinone"
+    },
+    "adminpanels": {
+      "via": "user",
+      "collection": "adminpanels"
     }
   }
 }

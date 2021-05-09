@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/static-pages": {
+    "/feature-requests": {
       "get": {
         "deprecated": false,
-        "description": "Find all the static-pages's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve static-pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Static-pages"
+          "Feature-request"
         ],
         "parameters": [
           {
@@ -193,12 +193,12 @@
           }
         ]
       },
-      "put": {
+      "post": {
         "deprecated": false,
-        "description": "Update a single static-pages record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve static-pages document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Static-pages"
+          "Feature-request"
         ],
         "requestBody": {
           "description": "",
@@ -252,19 +252,220 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewStatic-pages"
+                "$ref": "#/components/schemas/NewFeature-request"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/feature-requests/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
               }
             }
           }
         },
+        "summary": "",
+        "tags": [
+          "Feature-request"
+        ],
         "parameters": []
+      }
+    },
+    "/feature-requests/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Feature-request"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Feature-request"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewFeature-request"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single static-pages record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single static-pages based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -307,30 +508,44 @@
         },
         "summary": "",
         "tags": [
-          "Static-pages"
+          "Feature-request"
         ],
-        "parameters": []
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
       }
     }
   },
   "components": {
     "schemas": {
-      "Static-pages": {
+      "Feature-request": {
         "required": [
-          "id"
+          "id",
+          "description"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "privacy_policy": {
+          "description": {
             "type": "string"
           },
-          "terms_condition": {
-            "type": "string"
-          },
-          "about_us": {
-            "type": "string"
+          "status": {
+            "type": "string",
+            "default": "Pending",
+            "enum": [
+              "Pending",
+              "Finished"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -338,16 +553,21 @@
           }
         }
       },
-      "NewStatic-pages": {
+      "NewFeature-request": {
+        "required": [
+          "description"
+        ],
         "properties": {
-          "privacy_policy": {
+          "description": {
             "type": "string"
           },
-          "terms_condition": {
-            "type": "string"
-          },
-          "about_us": {
-            "type": "string"
+          "status": {
+            "type": "string",
+            "default": "Pending",
+            "enum": [
+              "Pending",
+              "Finished"
+            ]
           },
           "published_at": {
             "type": "string",

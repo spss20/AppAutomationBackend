@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feature_requests",
+  "info": {
+    "name": "Feature Request",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Finished"
+      ],
+      "default": "Pending"
+    }
+  }
+}

@@ -12,8 +12,8 @@
   },
   "attributes": {
     "cpanel": {
-      "via": "adminpanels",
-      "model": "cpanel"
+      "model": "cpanel",
+      "via": "adminpanels"
     },
     "subdomain": {
       "type": "string"
@@ -33,6 +33,11 @@
     },
     "product": {
       "model": "products"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "adminpanels"
     }
   }
 }

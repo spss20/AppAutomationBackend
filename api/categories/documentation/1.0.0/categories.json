@@ -601,7 +601,9 @@
                 "id",
                 "name",
                 "description",
-                "tag"
+                "tag",
+                "isAutomated",
+                "isAdminPanel"
               ],
               "properties": {
                 "id": {

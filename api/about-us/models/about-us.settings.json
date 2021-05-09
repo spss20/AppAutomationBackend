@@ -1,8 +1,8 @@
 {
   "kind": "singleType",
-  "collectionName": "static_pages",
+  "collectionName": "about_uses",
   "info": {
-    "name": "static_pages"
+    "name": "About Us"
   },
   "options": {
     "increments": true,
@@ -10,13 +10,7 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "privacy_policy": {
-      "type": "richtext"
-    },
-    "terms_condition": {
-      "type": "richtext"
-    },
-    "about_us": {
+    "about": {
       "type": "richtext"
     }
   }

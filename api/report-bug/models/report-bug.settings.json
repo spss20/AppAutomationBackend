@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "report_bugs",
+  "info": {
+    "name": "ReportBug"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "reproduce": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
