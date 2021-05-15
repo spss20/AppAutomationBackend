@@ -747,34 +747,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"

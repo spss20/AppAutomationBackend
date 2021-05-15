@@ -64,41 +64,45 @@
       "required": true,
       "unique": true
     },
-    "fluxstore": {
-      "via": "user",
-      "model": "fluxstore"
-    },
-    "fluxstore_multivendor": {
-      "via": "user",
-      "model": "fluxstore-multivendor"
-    },
-    "fbgrocery": {
-      "via": "user",
-      "model": "fbgrocery"
-    },
-    "ekart": {
-      "via": "user",
-      "model": "ekart"
-    },
-    "jainifood": {
-      "via": "user",
-      "model": "jainifood"
-    },
-    "smartervision": {
-      "via": "user",
-      "model": "smartervision"
-    },
     "cpanels": {
       "via": "user",
       "collection": "cpanel"
     },
-    "allinone": {
-      "via": "user",
-      "model": "allinone"
-    },
     "adminpanels": {
       "via": "user",
       "collection": "adminpanels"
+    },
+    "fluxstores": {
+      "via": "user",
+      "collection": "fluxstore"
+    },
+    "fluxstore_multivendors": {
+      "via": "user",
+      "collection": "fluxstore-multivendor"
+    },
+    "allinones": {
+      "via": "user",
+      "collection": "allinone"
+    },
+    "ekarts": {
+      "via": "user",
+      "collection": "ekart"
+    },
+    "fbgroceries": {
+      "via": "user",
+      "collection": "fbgrocery"
+    },
+    "jainifoods": {
+      "via": "user",
+      "collection": "jainifood"
+    },
+    "smartervisions": {
+      "via": "user",
+      "collection": "smartervision"
+    },
+    "webapps": {
+      "via": "user",
+      "collection": "webapp"
     }
   }
 }

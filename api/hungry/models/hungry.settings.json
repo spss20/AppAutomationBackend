@@ -67,7 +67,7 @@
     "user": {
       "plugin": "users-permissions",
       "model": "role",
-      "via": "hungry"
+      "via": "hungries"
     },
     "appType": {
       "type": "enumeration",

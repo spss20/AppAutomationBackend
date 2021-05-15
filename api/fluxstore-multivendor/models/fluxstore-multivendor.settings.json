@@ -95,7 +95,7 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "fluxstore_multivendor"
+      "via": "fluxstore_multivendors"
     }
   }
 }

@@ -79,7 +79,7 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "fbgrocery"
+      "via": "fbgroceries"
     }
   }
 }

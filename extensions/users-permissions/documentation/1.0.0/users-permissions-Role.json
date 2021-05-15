@@ -565,34 +565,61 @@
                 "phone": {
                   "type": "integer"
                 },
-                "fluxstore": {
-                  "type": "string"
-                },
-                "fluxstore_multivendor": {
-                  "type": "string"
-                },
-                "fbgrocery": {
-                  "type": "string"
-                },
-                "ekart": {
-                  "type": "string"
-                },
-                "jainifood": {
-                  "type": "string"
-                },
-                "smartervision": {
-                  "type": "string"
-                },
                 "cpanels": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "allinone": {
-                  "type": "string"
-                },
                 "adminpanels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fluxstores": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fluxstore_multivendors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "allinones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "ekarts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fbgroceries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "jainifoods": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "smartervisions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "webapps": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -607,69 +634,72 @@
               }
             }
           },
-          "hungry": {
-            "required": [
-              "id",
-              "appName",
-              "baseUrl",
-              "onesignal",
-              "packageName",
-              "icon",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "onesignal": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "delivery"
-                ]
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "hungries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "onesignal",
+                "packageName",
+                "icon",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "onesignal": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -702,8 +732,11 @@
               "type": "string"
             }
           },
-          "hungry": {
-            "type": "string"
+          "hungries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"

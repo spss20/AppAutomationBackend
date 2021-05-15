@@ -71,7 +71,7 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "smartervision"
+      "via": "smartervisions"
     }
   }
 }

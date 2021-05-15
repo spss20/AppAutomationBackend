@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/09/2021 1:51:10 PM"
+    "x-generation-date": "05/15/2021 5:16:27 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -14395,34 +14395,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -14748,34 +14775,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -15322,34 +15376,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -16042,34 +16123,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -16422,34 +16530,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -16942,34 +17077,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -17411,34 +17573,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -17782,8 +17971,11 @@
                   "type": "string"
                 }
               },
-              "hungry": {
-                "type": "string"
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -18140,34 +18332,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -18468,34 +18687,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -19323,34 +19569,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -19941,34 +20214,61 @@
               "phone": {
                 "type": "integer"
               },
-              "fluxstore": {
-                "type": "string"
-              },
-              "fluxstore_multivendor": {
-                "type": "string"
-              },
-              "fbgrocery": {
-                "type": "string"
-              },
-              "ekart": {
-                "type": "string"
-              },
-              "jainifood": {
-                "type": "string"
-              },
-              "smartervision": {
-                "type": "string"
-              },
               "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "allinone": {
-                "type": "string"
-              },
               "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -20128,34 +20428,61 @@
                 "phone": {
                   "type": "integer"
                 },
-                "fluxstore": {
-                  "type": "string"
-                },
-                "fluxstore_multivendor": {
-                  "type": "string"
-                },
-                "fbgrocery": {
-                  "type": "string"
-                },
-                "ekart": {
-                  "type": "string"
-                },
-                "jainifood": {
-                  "type": "string"
-                },
-                "smartervision": {
-                  "type": "string"
-                },
                 "cpanels": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "allinone": {
-                  "type": "string"
-                },
                 "adminpanels": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fluxstores": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fluxstore_multivendors": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "allinones": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "ekarts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "fbgroceries": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "jainifoods": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "smartervisions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "webapps": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -20170,69 +20497,72 @@
               }
             }
           },
-          "hungry": {
-            "required": [
-              "id",
-              "appName",
-              "baseUrl",
-              "onesignal",
-              "packageName",
-              "icon",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "onesignal": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "delivery"
-                ]
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
+          "hungries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "onesignal",
+                "packageName",
+                "icon",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "onesignal": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -20265,8 +20595,11 @@
               "type": "string"
             }
           },
-          "hungry": {
-            "type": "string"
+          "hungries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "created_by": {
             "type": "string"
@@ -20336,8 +20669,11 @@
                   "type": "string"
                 }
               },
-              "hungry": {
-                "type": "string"
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               },
               "created_by": {
                 "type": "string"
@@ -20349,418 +20685,6 @@
           },
           "phone": {
             "type": "integer"
-          },
-          "fluxstore": {
-            "required": [
-              "id",
-              "appname",
-              "baseUrl",
-              "consumerKey",
-              "consumerSecret",
-              "packageName",
-              "appIcon",
-              "splashImage",
-              "googleJson"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appname": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "consumerKey": {
-                "type": "string"
-              },
-              "consumerSecret": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "razorpayKey": {
-                "type": "string"
-              },
-              "mapApi": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "appIcon": {
-                "type": "string"
-              },
-              "headerLogo": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fluxstore_multivendor": {
-            "required": [
-              "id",
-              "appname",
-              "type",
-              "baseUrl",
-              "consumerKey",
-              "consumerSecret",
-              "appIcon",
-              "splashImage",
-              "googleJson"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appname": {
-                "type": "string"
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "dokan",
-                  "wcfm"
-                ]
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "consumerKey": {
-                "type": "string"
-              },
-              "consumerSecret": {
-                "type": "string"
-              },
-              "phone": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "razorpayKey": {
-                "type": "string"
-              },
-              "mapApi": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "appIcon": {
-                "type": "string"
-              },
-              "headerLogo": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "fbgrocery": {
-            "required": [
-              "id",
-              "appName",
-              "packageName",
-              "icon",
-              "splash",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "dynamicLink": {
-                "type": "string"
-              },
-              "lowInventory": {
-                "type": "integer"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splash": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "razorpayKey": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "delivery",
-                  "admin"
-                ]
-              },
-              "user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "ekart": {
-            "required": [
-              "id",
-              "appName",
-              "baseUrl",
-              "packageName",
-              "icon",
-              "splashImage",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "delivery"
-                ]
-              },
-              "user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "jainifood": {
-            "required": [
-              "id",
-              "appName",
-              "baseUrl",
-              "packageName",
-              "icon",
-              "splashImage",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "razorpayKey": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "delivery"
-                ]
-              },
-              "user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "smartervision": {
-            "required": [
-              "id",
-              "appName",
-              "baseUrl",
-              "packageName",
-              "icon",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "mapApi": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "vendor",
-                  "delivery"
-                ]
-              },
-              "user": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "cpanels": {
             "type": "array",
@@ -20816,69 +20740,6 @@
               }
             }
           },
-          "allinone": {
-            "required": [
-              "id",
-              "appName",
-              "baseUrl",
-              "packageName",
-              "icon",
-              "googleJson",
-              "appType"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "appName": {
-                "type": "string"
-              },
-              "baseUrl": {
-                "type": "string"
-              },
-              "packageName": {
-                "type": "string"
-              },
-              "mapApi": {
-                "type": "string"
-              },
-              "icon": {
-                "type": "string"
-              },
-              "splashImage": {
-                "type": "string"
-              },
-              "googleJson": {
-                "type": "string"
-              },
-              "versionCode": {
-                "type": "integer"
-              },
-              "versionName": {
-                "type": "string"
-              },
-              "user": {
-                "type": "string"
-              },
-              "appType": {
-                "type": "string",
-                "enum": [
-                  "user",
-                  "vendor",
-                  "delivery"
-                ]
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "adminpanels": {
             "type": "array",
             "items": {
@@ -20905,6 +20766,549 @@
                 },
                 "product": {
                   "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "fluxstores": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appname",
+                "baseUrl",
+                "consumerKey",
+                "consumerSecret",
+                "packageName",
+                "appIcon",
+                "splashImage",
+                "googleJson"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appname": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "consumerKey": {
+                  "type": "string"
+                },
+                "consumerSecret": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "razorpayKey": {
+                  "type": "string"
+                },
+                "mapApi": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "appIcon": {
+                  "type": "string"
+                },
+                "headerLogo": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "fluxstore_multivendors": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appname",
+                "type",
+                "baseUrl",
+                "consumerKey",
+                "consumerSecret",
+                "appIcon",
+                "splashImage",
+                "googleJson"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appname": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "dokan",
+                    "wcfm"
+                  ]
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "consumerKey": {
+                  "type": "string"
+                },
+                "consumerSecret": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "razorpayKey": {
+                  "type": "string"
+                },
+                "mapApi": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "appIcon": {
+                  "type": "string"
+                },
+                "headerLogo": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "allinones": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "packageName",
+                "icon",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "mapApi": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "vendor",
+                    "delivery"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "ekarts": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "packageName",
+                "icon",
+                "splashImage",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery"
+                  ]
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "fbgroceries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "packageName",
+                "icon",
+                "splash",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "dynamicLink": {
+                  "type": "string"
+                },
+                "lowInventory": {
+                  "type": "integer"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splash": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "razorpayKey": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery",
+                    "admin"
+                  ]
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "jainifoods": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "packageName",
+                "icon",
+                "splashImage",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "razorpayKey": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery"
+                  ]
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "smartervisions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "packageName",
+                "icon",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "mapApi": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "vendor",
+                    "delivery"
+                  ]
+                },
+                "user": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "webapps": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appname",
+                "icon",
+                "package",
+                "website"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appname": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                },
+                "website": {
+                  "type": "string"
+                },
+                "version_name": {
+                  "type": "number"
+                },
+                "version_code": {
+                  "type": "integer"
                 },
                 "user": {
                   "type": "string"
@@ -20966,34 +21370,61 @@
           "phone": {
             "type": "integer"
           },
-          "fluxstore": {
-            "type": "string"
-          },
-          "fluxstore_multivendor": {
-            "type": "string"
-          },
-          "fbgrocery": {
-            "type": "string"
-          },
-          "ekart": {
-            "type": "string"
-          },
-          "jainifood": {
-            "type": "string"
-          },
-          "smartervision": {
-            "type": "string"
-          },
           "cpanels": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "allinone": {
-            "type": "string"
-          },
           "adminpanels": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fluxstores": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fluxstore_multivendors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allinones": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ekarts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fbgroceries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "jainifoods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "smartervisions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "webapps": {
             "type": "array",
             "items": {
               "type": "string"

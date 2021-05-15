@@ -64,7 +64,7 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "allinone"
+      "via": "allinones"
     },
     "appType": {
       "type": "enumeration",

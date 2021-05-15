@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "webapps",
   "info": {
-    "name": "Webapp"
+    "name": "Webapp",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -39,7 +40,8 @@
     },
     "user": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "webapps"
     }
   }
 }

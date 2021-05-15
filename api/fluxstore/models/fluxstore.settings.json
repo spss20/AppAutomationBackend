@@ -88,7 +88,7 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user",
-      "via": "fluxstore"
+      "via": "fluxstores"
     }
   }
 }

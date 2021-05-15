@@ -34,9 +34,9 @@
       "configurable": false,
       "plugin": "users-permissions"
     },
-    "hungry": {
+    "hungries": {
       "via": "user",
-      "model": "hungry"
+      "collection": "hungry"
     }
   }
 }
