@@ -19,10 +19,10 @@ module.exports = {
         let entity;
         if (ctx.is('multipart')) {
             const { data, files } = parseMultipartData(ctx);
-            data.user = [id];
+            data.user_id = [id];
             entity = await strapi.services.adminpanels.create(data, { files });
         } else {
-            ctx.request.body.user = [id];
+            ctx.request.body.user_id = [id];
             entity = await strapi.services.adminpanels.create(ctx.request.body);
         }
 
@@ -57,7 +57,7 @@ module.exports = {
 
         //return output
         entity.outputUrl = serverEntity.url + "/process/" + fileName;
-        return sanitizeEntity(entity, { model: strapi.models.adminpanelss });
+        return sanitizeEntity(entity, { model: strapi.models.adminpanels });
     },
 
 
