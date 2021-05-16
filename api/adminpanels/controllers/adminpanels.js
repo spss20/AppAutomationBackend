@@ -19,10 +19,10 @@ module.exports = {
         let entity;
         if (ctx.is('multipart')) {
             const { data, files } = parseMultipartData(ctx);
-            data.user_id = [id];
+            data.user = [id];
             entity = await strapi.services.adminpanels.create(data, { files });
         } else {
-            ctx.request.body.user_id = [id];
+            ctx.request.body.user = [id];
             entity = await strapi.services.adminpanels.create(ctx.request.body);
         }
 

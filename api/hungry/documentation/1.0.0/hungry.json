@@ -754,28 +754,99 @@
           "user": {
             "required": [
               "id",
-              "name"
+              "username",
+              "email",
+              "phone"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "username": {
                 "type": "string"
               },
-              "description": {
+              "email": {
                 "type": "string"
               },
-              "type": {
+              "provider": {
                 "type": "string"
               },
-              "permissions": {
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "users": {
+              "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"

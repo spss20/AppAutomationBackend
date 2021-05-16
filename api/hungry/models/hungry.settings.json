@@ -38,7 +38,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
     "splashImage": {
       "model": "file",
@@ -47,7 +48,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "googleJson": {
       "model": "file",
@@ -56,7 +58,8 @@
         "files"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
     "versionCode": {
       "type": "integer"
@@ -66,7 +69,7 @@
     },
     "user": {
       "plugin": "users-permissions",
-      "model": "role",
+      "model": "user",
       "via": "hungries"
     },
     "appType": {

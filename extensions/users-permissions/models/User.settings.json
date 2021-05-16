@@ -103,6 +103,10 @@
     "webapps": {
       "via": "user",
       "collection": "webapp"
+    },
+    "hungries": {
+      "via": "user",
+      "collection": "hungry"
     }
   }
 }

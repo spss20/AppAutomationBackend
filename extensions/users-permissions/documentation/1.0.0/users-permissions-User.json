@@ -1899,6 +1899,75 @@
                 }
               }
             }
+          },
+          "hungries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "onesignal",
+                "packageName",
+                "icon",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "onesignal": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -2000,6 +2069,12 @@
             }
           },
           "webapps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hungries": {
             "type": "array",
             "items": {
               "type": "string"

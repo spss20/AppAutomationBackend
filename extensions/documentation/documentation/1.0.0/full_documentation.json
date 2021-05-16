@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/15/2021 5:53:16 PM"
+    "x-generation-date": "05/16/2021 8:31:53 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -14583,6 +14583,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -14958,6 +14964,12 @@
                 }
               },
               "webapps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "hungries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -15559,6 +15571,12 @@
                 }
               },
               "webapps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "hungries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -16311,6 +16329,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -16713,6 +16737,12 @@
                 }
               },
               "webapps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "hungries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -17265,6 +17295,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -17761,6 +17797,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -18072,28 +18114,99 @@
           "user": {
             "required": [
               "id",
-              "name"
+              "username",
+              "email",
+              "phone"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "name": {
+              "username": {
                 "type": "string"
               },
-              "description": {
+              "email": {
                 "type": "string"
               },
-              "type": {
+              "provider": {
                 "type": "string"
               },
-              "permissions": {
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "phone": {
+                "type": "integer"
+              },
+              "cpanels": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
-              "users": {
+              "adminpanels": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstores": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fluxstore_multivendors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "allinones": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "ekarts": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fbgroceries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "jainifoods": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "smartervisions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "webapps": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -18520,6 +18633,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -18870,6 +18989,12 @@
                 }
               },
               "webapps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "hungries": {
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -19757,6 +19882,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -20402,6 +20533,12 @@
                   "type": "string"
                 }
               },
+              "hungries": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
@@ -20611,6 +20748,12 @@
                   }
                 },
                 "webapps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "hungries": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -21452,6 +21595,75 @@
                 }
               }
             }
+          },
+          "hungries": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "onesignal",
+                "packageName",
+                "icon",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "onesignal": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery"
+                  ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -21553,6 +21765,12 @@
             }
           },
           "webapps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "hungries": {
             "type": "array",
             "items": {
               "type": "string"
