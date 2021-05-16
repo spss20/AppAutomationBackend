@@ -23,22 +23,22 @@ module.exports = {
             entity = await strapi.services.adminpanels.create(data, { files });
         } else {
             ctx.request.body.user = [id];
-            entity = await strapi.services.adminpanelss.create(ctx.request.body);
+            entity = await strapi.services.adminpanels.create(ctx.request.body);
         }
 
-        //TODO: Add a null adminpanels check here for entity.adminpanels
+        //TODO: Add a null cpanel check here for entity.cpanel
         //Preparing Command
 
         //find website server 
-        const serverEntity = await strapi.services.server.findOne(entity.adminpanels.server);
+        const serverEntity = await strapi.services.server.findOne(entity.cpanel.server);
 
-        const fileName = entity.adminpanels.username + "_" + uuidv4().substring(0, 8) + ".txt";
+        const fileName = entity.cpanel.username + "_" + uuidv4().substring(0, 8) + ".txt";
         const host = "http://" + process.env.HOST + ":" + process.env.PORT;
         const cmd = `sudo /home/${serverEntity.username}/scripts/` + entity.product.slug +
             '/install_admin_panel.sh ' +
             (entity.subdomain ? ' -s "' + entity.subdomain + '"' : '') +
-            ' -d "' + entity.adminpanels.domain + '"' +
-            ' -u "' + entity.adminpanels.username + '"' +
+            ' -d "' + entity.cpanel.domain + '"' +
+            ' -u "' + entity.cpanel.username + '"' +
             (entity.company_logo ? ' -l "' + host + entity.company_logo.url + '"' : '') +
             ' -n "' + entity.company_name + '"' +
             ' -x "' + entity.product.slug + '"' +
@@ -60,7 +60,7 @@ module.exports = {
         return sanitizeEntity(entity, { model: strapi.models.adminpanelss });
     },
 
-    
+
     async find(ctx) {
 
         //getting user id
