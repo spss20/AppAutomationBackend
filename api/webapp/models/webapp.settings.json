@@ -22,7 +22,8 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
     "package": {
       "type": "string",
@@ -42,6 +43,10 @@
       "plugin": "users-permissions",
       "model": "user",
       "via": "webapps"
+    },
+    "orders": {
+      "collection": "orders",
+      "via": "webapp"
     }
   }
 }

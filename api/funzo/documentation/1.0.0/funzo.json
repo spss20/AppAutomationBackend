@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/fluxstores": {
+    "/funzos": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Fluxstore"
+                    "$ref": "#/components/schemas/Funzo"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Fluxstore"
+          "Funzo"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Fluxstore"
+                  "$ref": "#/components/schemas/Funzo"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Fluxstore"
+          "Funzo"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFluxstore"
+                "$ref": "#/components/schemas/NewFunzo"
               }
             }
           }
         }
       }
     },
-    "/fluxstores/count": {
+    "/funzos/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Fluxstore"
+          "Funzo"
         ],
         "parameters": []
       }
     },
-    "/fluxstores/{id}": {
+    "/funzos/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Fluxstore"
+                  "$ref": "#/components/schemas/Funzo"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Fluxstore"
+          "Funzo"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Fluxstore"
+                  "$ref": "#/components/schemas/Funzo"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Fluxstore"
+          "Funzo"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewFluxstore"
+                "$ref": "#/components/schemas/NewFunzo"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Fluxstore"
+          "Funzo"
         ],
         "parameters": [
           {
@@ -514,117 +514,30 @@
   },
   "components": {
     "schemas": {
-      "Fluxstore": {
+      "Funzo": {
         "required": [
           "id",
-          "appname",
+          "appName",
           "baseUrl",
-          "consumerKey",
-          "consumerSecret",
           "packageName",
-          "appIcon",
           "splashImage",
-          "googleJson"
+          "googleJson",
+          "appType"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "appname": {
+          "appName": {
             "type": "string"
           },
           "baseUrl": {
             "type": "string"
           },
-          "consumerKey": {
-            "type": "string"
-          },
-          "consumerSecret": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "razorpayKey": {
-            "type": "string"
-          },
-          "mapApi": {
-            "type": "string"
-          },
           "packageName": {
             "type": "string"
           },
-          "appIcon": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "headerLogo": {
+          "icon": {
             "required": [
               "id",
               "name",
@@ -831,6 +744,14 @@
           "versionName": {
             "type": "string"
           },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "delivery",
+              "vendor"
+            ]
+          },
           "user": {
             "required": [
               "id",
@@ -958,37 +879,18 @@
           }
         }
       },
-      "NewFluxstore": {
+      "NewFunzo": {
         "required": [
-          "appname",
+          "appName",
           "baseUrl",
-          "consumerKey",
-          "consumerSecret",
-          "packageName"
+          "packageName",
+          "appType"
         ],
         "properties": {
-          "appname": {
+          "appName": {
             "type": "string"
           },
           "baseUrl": {
-            "type": "string"
-          },
-          "consumerKey": {
-            "type": "string"
-          },
-          "consumerSecret": {
-            "type": "string"
-          },
-          "phone": {
-            "type": "string"
-          },
-          "email": {
-            "type": "string"
-          },
-          "razorpayKey": {
-            "type": "string"
-          },
-          "mapApi": {
             "type": "string"
           },
           "packageName": {
@@ -999,6 +901,14 @@
           },
           "versionName": {
             "type": "string"
+          },
+          "appType": {
+            "type": "string",
+            "enum": [
+              "user",
+              "delivery",
+              "vendor"
+            ]
           },
           "user": {
             "type": "string"
@@ -1019,7 +929,7 @@
   },
   "tags": [
     {
-      "name": "Fluxstore"
+      "name": "Funzo"
     }
   ]
 }

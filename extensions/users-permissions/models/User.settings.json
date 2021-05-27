@@ -107,6 +107,10 @@
     "hungries": {
       "via": "user",
       "collection": "hungry"
+    },
+    "funzos": {
+      "via": "user",
+      "collection": "funzo"
     }
   }
 }

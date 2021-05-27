@@ -715,11 +715,66 @@
                   "type": "string"
                 }
               },
+              "funzos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created_by": {
                 "type": "string"
               },
               "updated_by": {
                 "type": "string"
+              }
+            }
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "config",
+                "orderName",
+                "orderImage"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "config": {
+                  "type": "string"
+                },
+                "outputUrl": {
+                  "type": "string"
+                },
+                "orderId": {
+                  "type": "integer"
+                },
+                "subproduct": {
+                  "type": "string"
+                },
+                "orderName": {
+                  "type": "string"
+                },
+                "orderImage": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "webapp": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -753,6 +808,12 @@
           },
           "user": {
             "type": "string"
+          },
+          "orders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

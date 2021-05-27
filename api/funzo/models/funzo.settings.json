@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funzos",
+  "info": {
+    "name": "Funzo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "appName": {
+      "type": "string",
+      "required": true
+    },
+    "baseUrl": {
+      "type": "string",
+      "required": true
+    },
+    "packageName": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "splashImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "googleJson": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "versionCode": {
+      "type": "integer"
+    },
+    "versionName": {
+      "type": "string"
+    },
+    "appType": {
+      "type": "enumeration",
+      "enum": [
+        "user",
+        "delivery",
+        "vendor"
+      ],
+      "required": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "funzos"
+    }
+  }
+}

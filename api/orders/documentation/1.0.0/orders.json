@@ -813,6 +813,62 @@
                   "type": "string"
                 }
               },
+              "funzos": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "webapp": {
+            "required": [
+              "id",
+              "appname",
+              "icon",
+              "package",
+              "website"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "appname": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              },
+              "package": {
+                "type": "string"
+              },
+              "website": {
+                "type": "string"
+              },
+              "version_name": {
+                "type": "number"
+              },
+              "version_code": {
+                "type": "integer"
+              },
+              "user": {
+                "type": "string"
+              },
+              "orders": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -845,6 +901,9 @@
             "type": "string"
           },
           "user": {
+            "type": "string"
+          },
+          "webapp": {
             "type": "string"
           },
           "published_at": {

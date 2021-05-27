@@ -45,6 +45,10 @@
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "webapp": {
+      "via": "orders",
+      "model": "webapp"
     }
   }
 }

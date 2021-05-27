@@ -1888,6 +1888,12 @@
                 "user": {
                   "type": "string"
                 },
+                "orders": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "published_at": {
                   "type": "string"
                 },
@@ -1956,6 +1962,69 @@
                     "user",
                     "delivery"
                   ]
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "funzos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appName",
+                "baseUrl",
+                "packageName",
+                "splashImage",
+                "googleJson",
+                "appType"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appName": {
+                  "type": "string"
+                },
+                "baseUrl": {
+                  "type": "string"
+                },
+                "packageName": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "splashImage": {
+                  "type": "string"
+                },
+                "googleJson": {
+                  "type": "string"
+                },
+                "versionCode": {
+                  "type": "integer"
+                },
+                "versionName": {
+                  "type": "string"
+                },
+                "appType": {
+                  "type": "string",
+                  "enum": [
+                    "user",
+                    "delivery",
+                    "vendor"
+                  ]
+                },
+                "user": {
+                  "type": "string"
                 },
                 "published_at": {
                   "type": "string"
@@ -2075,6 +2144,12 @@
             }
           },
           "hungries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "funzos": {
             "type": "array",
             "items": {
               "type": "string"
