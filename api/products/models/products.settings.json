@@ -77,6 +77,10 @@
       "type": "boolean",
       "required": true,
       "default": false
+    },
+    "transactions": {
+      "via": "product",
+      "collection": "transaction"
     }
   }
 }

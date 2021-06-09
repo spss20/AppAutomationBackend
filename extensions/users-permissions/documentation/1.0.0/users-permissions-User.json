@@ -1894,6 +1894,12 @@
                     "type": "string"
                   }
                 },
+                "transaction": {
+                  "type": "string"
+                },
+                "subproduct": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "Transaction"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "product": {
+      "model": "products",
+      "via": "transactions"
+    },
+    "webapps": {
+      "via": "transaction",
+      "collection": "webapp"
+    }
+  }
+}

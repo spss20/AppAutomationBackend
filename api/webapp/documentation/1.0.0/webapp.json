@@ -778,6 +778,75 @@
               }
             }
           },
+          "transaction": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "number"
+              },
+              "product": {
+                "type": "string"
+              },
+              "webapps": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "subproduct": {
+            "required": [
+              "id",
+              "apischema"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "images": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "product": {
+                "type": "string"
+              },
+              "apischema": {
+                "type": "object"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -814,6 +883,12 @@
             "items": {
               "type": "string"
             }
+          },
+          "transaction": {
+            "type": "string"
+          },
+          "subproduct": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",

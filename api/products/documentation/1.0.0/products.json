@@ -839,6 +839,40 @@
             "type": "boolean",
             "default": false
           },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "number"
+                },
+                "product": {
+                  "type": "string"
+                },
+                "webapps": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -895,6 +929,12 @@
           "isAdminPanel": {
             "type": "boolean",
             "default": false
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",

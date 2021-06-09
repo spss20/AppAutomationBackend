@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/banners": {
+    "/transactions": {
       "get": {
         "deprecated": false,
-        "description": "Find all the banners's records",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Banners"
+                    "$ref": "#/components/schemas/Transaction"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new banners record",
+        "description": "Create a new record",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banners"
+                  "$ref": "#/components/schemas/Transaction"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Transaction"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBanners"
+                "$ref": "#/components/schemas/NewTransaction"
               }
             }
           }
         }
       }
     },
-    "/banners/count": {
+    "/transactions/count": {
       "get": {
         "deprecated": false,
-        "description": "Retrieve the numver of banners documents",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Transaction"
         ],
         "parameters": []
       }
     },
-    "/banners/{id}": {
+    "/transactions/{id}": {
       "get": {
         "deprecated": false,
-        "description": "Find one banners record",
+        "description": "",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banners"
+                  "$ref": "#/components/schemas/Transaction"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a single banners record",
+        "description": "Update a record",
         "responses": {
           "200": {
-            "description": "Retrieve banners document(s)",
+            "description": "response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Banners"
+                  "$ref": "#/components/schemas/Transaction"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Transaction"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewBanners"
+                "$ref": "#/components/schemas/NewTransaction"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a single banners record",
+        "description": "Delete a record",
         "responses": {
           "200": {
-            "description": "deletes a single banners based on the ID supplied",
+            "description": "deletes a single record based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Banners"
+          "Transaction"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Banners": {
+      "Transaction": {
         "required": [
           "id"
         ],
@@ -522,72 +522,8 @@
           "id": {
             "type": "string"
           },
-          "image": {
-            "required": [
-              "id",
-              "name",
-              "hash",
-              "mime",
-              "size",
-              "url",
-              "provider"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "alternativeText": {
-                "type": "string"
-              },
-              "caption": {
-                "type": "string"
-              },
-              "width": {
-                "type": "integer"
-              },
-              "height": {
-                "type": "integer"
-              },
-              "formats": {
-                "type": "object"
-              },
-              "hash": {
-                "type": "string"
-              },
-              "ext": {
-                "type": "string"
-              },
-              "mime": {
-                "type": "string"
-              },
-              "size": {
-                "type": "number"
-              },
-              "url": {
-                "type": "string"
-              },
-              "previewUrl": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "provider_metadata": {
-                "type": "object"
-              },
-              "related": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "amount": {
+            "type": "number"
           },
           "product": {
             "required": [
@@ -667,16 +603,84 @@
               }
             }
           },
+          "webapps": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "appname",
+                "icon",
+                "package",
+                "website"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "appname": {
+                  "type": "string"
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "package": {
+                  "type": "string"
+                },
+                "website": {
+                  "type": "string"
+                },
+                "version_name": {
+                  "type": "number"
+                },
+                "version_code": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "orders": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "transaction": {
+                  "type": "string"
+                },
+                "subproduct": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewBanners": {
+      "NewTransaction": {
         "properties": {
+          "amount": {
+            "type": "number"
+          },
           "product": {
             "type": "string"
+          },
+          "webapps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
@@ -694,7 +698,7 @@
   },
   "tags": [
     {
-      "name": "Banners"
+      "name": "Transaction"
     }
   ]
 }
